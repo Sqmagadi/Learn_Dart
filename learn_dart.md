@@ -470,7 +470,8 @@ void main() {
 
   double result = calculateInterest(principal, rate, time);
   print("The simple interest is $result.");
-}```
+}
+```
 
 
 Example 1: Calculation of simple interest WITH Arrow Function
@@ -490,7 +491,9 @@ void main() {
 }
 ```
 
+# ASSIGNMENT
 
+```
 Data Types in Dart Technical Assignment
 This technical assignment requires the creation of a program using the Dart programming language. The program should demonstrate an understanding of data types in Dart. Implement the data types you have learned in the previous lesson.
 Requirements
@@ -498,12 +501,9 @@ The program should demonstrate an understanding of data types in Dart, including
 The program should include at least one example of each data type.
 The program should include comments to explain each data type and its use.
 The program should be tested for accuracy and performance.
+```
 
-
-Dart Functions Assignment
-
-In this assignment, you will be tasked with writing several functions in Dart.
-
+```
 Task 1
 Write a function called addTwo that takes two numbers as arguments and returns the sum of those two numbers.
 Task 2
@@ -516,12 +516,11 @@ Task 5
 Write a function called stringLength that takes an argument of type String and returns the length of that string.
 Task 6
 Write a function called getFirstElement that takes a list as an argument and returns the first element of that list.
-
-Please submit your assignment by pushing your code to GitHub and sharing the link to
-https://forms.gle/Cz9V6W7pgcciuSY7A
+```
 
 
-Control Flow
+# Control Flow
+
 The control statements or flow of control statements are used to control the flow of Dart program. These statements are very important in any programming languages to decide whether other statement will be executed or not. The code statement generally runs in the sequential manner. We may require executing or skipping some group of statements based on the given condition, jumps to another statement, or repeat the execution of the statements.
 
 Categories of Flow Statement
