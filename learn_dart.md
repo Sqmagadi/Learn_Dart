@@ -523,17 +523,22 @@ Write a function called getFirstElement that takes a list as an argument and r
 
 The control statements or flow of control statements are used to control the flow of Dart program. These statements are very important in any programming languages to decide whether other statement will be executed or not. The code statement generally runs in the sequential manner. We may require executing or skipping some group of statements based on the given condition, jumps to another statement, or repeat the execution of the statements.
 
-Categories of Flow Statement
-In Dart, Control flow statement can be categorized mainly in three following ways.
-Decision-making statements
-Looping statements
-Jump statements
+#### Categories of Flow Statement
 
-Decision-making Statements
+In Dart, Control flow statement can be categorized mainly in three following ways.
+- Decision-making statements
+- Looping statements
+- Jump statements
+
+### 1. Decision-making Statements
+
 Dart provides following types of Decision-making statement.
-If Statement
+
+#### If Statement
+
 Executes a block of code if a specified condition is true.
 
+```
 // if statement outputs depending on a certain conditional expression
 void main() {
   var age = 30;
@@ -542,10 +547,13 @@ void main() {
   }
   //print("Mariam is still young to vote");
 }
+```
 
-If-else Statements
+#### If-else Statements
+
 In Dart, the if-else statement is used to execute a block of code based on whether a condition is true or false. Here's the syntax:
 
+```
 void main() {
   var age = 20;
   if (age > 18) {
@@ -555,12 +563,13 @@ void main() {
     print("Mariam is still young to vote");
   }
 }
+```
 
+#### If else if Statement
 
-If else if Statement
+In Dart, the *if-else *statement allows you to evaluate multiple conditions and execute different blocks of code based on these conditions. Here's the syntax:
 
-In Dart, the if-else if-else statement allows you to evaluate multiple conditions and execute different blocks of code based on these conditions. Here's the syntax:
-
+```
 void main() {
   var age = 18;
   if (age > 18) {
@@ -571,19 +580,20 @@ void main() {
     print("Mariam is still young to vote");
   }
 }
+```
 
-/*
 If age is greater than 18, the statement "Mariam is a voter in Kenya" will be printed.
+
 If age is exactly 18, the statement "Mariam just became eligible to vote in Kenya" will be printed.
+
 If neither of the above conditions is met, the statement "Mariam is still young to vote" will be printed.
-*/ 
 
 
-Switch Case Statement
+# Switch Case Statement
 
 In Dart, the switch statement is used to evaluate an expression and execute different blocks of code based on matching cases. The syntax of the switch statement is as follows:
 
-
+```
 void main() {
   int i = 11;
   switch (i) {
@@ -601,16 +611,21 @@ void main() {
       break;
   }
 }
-//The code checks the value of variable i using a switch statement and prints a message based on its value, defaulting to an "out of range" message if none match.
+```
+
+The code checks the value of variable i using a switch statement and prints a message based on its value, defaulting to an "out of range" message if none match.
 
 
-Looping Statements
+# Looping Statements
 
 Dart Loop is used to run a block of code repetitively for a given number of times or until matches the specified condition. Loops are essential tools for any programming language. It is used to iterate the Dart iterable such as list, map, etc. and perform operations for multiple times. A loop can have two parts - a body of the loop and control statements. The main objective of the loop is to run the code multiple times. Dart supports the following type of loops.
 Dart for loop
-The for loop is used when we know how many times a block of code will execute.
 
-//The for loop is used when we know how many times a block of code will execute
+The **for loop** is used when we know how many times a block of code will execute.
+
+The **for loop** is used when we know how many times a block of code will execute
+
+```
 void main()  
 {  
     int num = 1;  
@@ -618,13 +633,16 @@ void main()  
     {  
         print(num);     //to print the number  
     }  
-} 
 // The code prints numbers from 1 to 10 using a for loop in Dart.
+} 
+```
 
 
-Dart for…in loop
-The for..in loop is similar to for loop but different in its syntax. It iterates through an object's properties. The Dart for..in loop accepts an expression as iterator and iterates through the elements one at a time in sequence. The variable var holds the values of the iteration. The for…in will execute until elements remain in iterators.
+# Dart for…in loop
 
+The **for..in** loop is similar to for loop but different in its syntax. It iterates through an object's properties. The Dart for..in loop accepts an expression as iterator and iterates through the elements one at a time in sequence. The variable var holds the values of the iteration. The for…in will execute until elements remain in iterators.
+
+```
 void main()  
 {  
     var list1 = [10,20,30,40,50];  
@@ -633,6 +651,8 @@ void main()  
         print(i);       //to print the number  
     }  
 }  //The code iterates over elements in the list list1 using a for-in loop and prints each element.
+```
+
 
 Dart while loop
 The while loop is used when the number of execution of a block of code is not known. It will execute as long as the condition is true. It initially checks the given condition then executes the statements that are inside the while loop. The while loop is mostly used to create an infinite loop.
