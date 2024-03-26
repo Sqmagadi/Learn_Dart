@@ -654,9 +654,11 @@ void main()  
 ```
 
 
-Dart while loop
+# Dart while loop
+
 The while loop is used when the number of execution of a block of code is not known. It will execute as long as the condition is true. It initially checks the given condition then executes the statements that are inside the while loop. The while loop is mostly used to create an infinite loop.
 
+```
 void main()  
 {  
     var a = 1;  
@@ -667,10 +669,14 @@ void main()  
 }  
 } 
 //The code prints numbers from 1 to 10 using a while loop in Dart.
+```
 
-Dart do-while loop
+
+# Dart do-while loop
+
 Dart do while loop executes a block of the statement first and then checks the condition. If the condition returns true, then the loop continues its iteration. It is similar to Dart while loop but the only difference is, in the do-while loop a block of statements inside the body of loop will execute at least once.
 
+```
 void main()  
 {  
  var a = 1;  
@@ -683,24 +689,20 @@ do  
        while(a<maxnum);  
 } 
 //The code iteratively prints the value of variable a until it reaches 10, using a do-while loop in Dart.
+```
 
+# Object Oriented Programming 
 
-Object Oriented Programming 
-
-ram applications.
 OOP is based on objects, which are data structures containing data and methods.
-OOP is a way of thinking about programming that differs from traditional procedural programming.
-OOP can make code more modular, flexible, and extensible.
-OOP can help you to understand better and solve problems.
 
-
-Classes
+### Classes
 
 In object-oriented programming, a class is a blueprint for creating objects. A class defines the properties and methods that an object will have. For example, a class called Dog might have properties like breed, color and methods like bark, run.
 
-Declaring A class in Dart
-In Dart programming, you can declare a class using the class keyword followed by the class name. Here's a simple example:
+#### Declaring A class in Dart
+In Dart programming, you can declare a class using the class keyword followed by the class name. 
 
+```
 class Dog {
   // Properties/attributes
   String breed;
@@ -733,8 +735,7 @@ void main() {
   myDog.bark();
   myDog.run();
 }
-
-
+```
 Brief explanation
 Class Declaration (class Dog { ... }):
 
