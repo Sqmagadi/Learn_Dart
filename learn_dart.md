@@ -94,26 +94,45 @@ print("Married Status is $isMarried");
 
 # Comments in Dart
 
-Comments are a great way to enhance the readability of your Dart code and make it easier to understand. In Dart, there are two types of comments: single-line and multi-line comments.
+Comments are a great way to enhance the readability of your Dart code and make it easier to understand. In Dart, there are two types of comments: **single-line** and **multi-line** comments.
 
-Single-line Comments
+*Single-line Comments*
 
-Single-line comments start with two forward slashes (//). Everything after the two forward slashes is ignored by the compiler. For example:
+Single-line comments start with two forward slashes (`//`). Everything after the two forward slashes is ignored by the compiler. 
 
+```
+void main() {
+// declaring variables
+String name = "John"; 
+   
+// printing variables value   
+print("Name is $name");
+}
+```
 
-Multi-line Comments
+*Multi-line Comments*
 
-Multi-line comments start with a forward slash and an asterisk (/*) and end with an asterisk and a forward slash (*/). Anything between the starting and ending delimiters is ignored by the compiler. For example:
+Multi-line comments start with a forward slash and an asterisk (`/*`) and end with an asterisk and a forward slash (`*/`). Anything between the starting and ending delimiters is ignored by the compiler. 
 
+```
+void main() {
+// declaring variables
+String name = "John"; 
 
- Data Types In Dart
+/* String address = "Kenya";  
+num age = 20; 
+num height = 5.9;
+bool isMarried = false;  */
+   
+// printing variables value   
+print("Name is $name");
+}
+```
 
-Learning Objectives
+# Data Types In Dart
 
-1. To understand what data type is
-2. To understand different data types in DART programming
-3. Be able to code with the different data types
 A data type is an attribute of data which tells the compiler or interpreter how the programmer intends to use the data.
+
 Dart supports the following data types:
 1. Number
 2. Strings
@@ -123,10 +142,10 @@ Dart supports the following data types:
 6. Runes
 7. Null
 
-Numbers
-When you need to store numeric value on dart, you can use either int or double. Both int and double are subtypes of num. Int stores whole numbers while double stores decimal numbers.
+### Numbers
+When you need to store numeric value on dart, you can use either *int* or *double*. Both *int* and *double* are subtypes of *num*. *Int* stores whole numbers while *double* stores decimal numbers.
 
-
+```
 void main() {
 // Declaring Variables  
 int num1 = 100; // without decimal point.
@@ -145,11 +164,11 @@ print("Num 4 is $num4");  
 print("Sum is $sum");  
    
 }
+```
 
-
-String
-String helps you to store text data in your program. You can use single or double quotes to store string in dart.
-
+### String
+String helps you to store text data in your program. You can use single ('') or double("") quotes to store string in dart.
+```
 void main() {
 // Declaring Values     
 String schoolName = "Powerlearn Project Academy";
@@ -158,25 +177,26 @@ String address = "AFRICA";  
 // Printing Values
 print("My School name is $schoolName and the address is $address");   
 }
+```
 
+### Booleans
+In Dart, boolean holds either **true** or **false** value. You can write the bool keyword to define the boolean data type. You can use boolean if the answer is true or false. 
 
-Booleans
-In Dart, boolean holds either true or false value. You can write the bool keyword to define the boolean data type. You can use boolean if the answer is true or false. Consider the answer to the following questions:
-Are you asleep?
-Is the door open?
-Does a cat fly?
-Are you older than your father?
-These all are yes/no questions. Its a good idea to store them in boolean.
+Are you a boy?     *yes*
 
+Is the door open?  *no*
+
+```
 void main() {
 bool isMarried = true;
 print("Married Status: $isMarried");
 }
+```
 
-
-Lists
+### Lists
 Dart List is similar to an array, which is the ordered collection of the objects. If you want to store multiple values without creating multiple variables, you can use a list.
 
+```
 void main() {
 List<String> names = ["John", "James", "Peter"];
 print("Value of names is $names");
@@ -187,12 +207,13 @@ print("Value of names[2] is ${names[2]}"); // index 2
 
 print(names);
 }
+```
 
+### Maps
 
-Maps
-A map is a dynamic collection that represents a set of values ​as key-value pairs. Keys and values ​in the
-map can be of any type.
+A map is a dynamic collection that represents a set of values ​as key-value pairs. Keys and values ​in the map can be of any type.
 
+```
 void main() {
 // Creating a Map with String keys and int values
 Map<String, int> ages = {'Alice': 30,
@@ -201,10 +222,12 @@ Map<String, int> ages = {'Alice': 30,
 };
 print("Ages of students: $ages");
 }
+```
 
-Runes
+### Runes
 A rune can be defined as an integer used to represent any Unicode code point. As a Dart string is a simple sequence of UTF-16 code units, 32-bit Unicode values in a string are represented using a special syntax.
 
+```
 void main() {
   // Define a string with runes
   String runesString = "Runes in Dart: \u{1F600} \u{1F64B} \u{1F680}";
@@ -214,29 +237,35 @@ void main() {
 
   //
 }
+```
 
+# Functions in Dart
 
-Functions in Dart
+Functions are the block of code that performs a specific task. They are created when some statements are repeatedly occurring in the program. The function helps reusability of the code in the program.
 
- Functions are the block of code that performs a specific task. They are created when some statements are repeatedly occurring in the program. The function helps reusability of the code in the program.
+  #### Function Advantages
 
-Function Advantages
-Avoid Code Repetition
-Easy to divide the complex program into smaller parts
-Helps to write a clean code
-Syntax of a function
+- Avoid Code Repetition
+- Easy to divide the complex program into smaller parts
+- Helps to write a clean code
+
+#### Syntax 
+
+```
 returntype functionName(parameter1,parameter2, ...){
 // function body
 }
+```
 
-Return type: It tells you the function output type. It can be void, String, int, double, etc. If the function doesn’t return anything, you can use void as the return type.
-Function Name: You can name functions by almost any name. Always follow a lowerCamelCase naming convention like void printName().
-Parameters: Parameters are the input to the function, which you can write inside the bracket (). Always follow a lowerCamelCase naming convention for your function parameter.
+`Return type`: It tells you the function output type. It can be void, String, int, double, etc. If the function doesn’t return anything, you can use void as the return type.
 
-Example 1: Function That Prints Name
-This is a simple program that prints name using function. The name of function is printName().
+`Function Name`: You can name functions by almost any name. Always follow a `lowerCamelCase` naming convention like void `printName()`.
 
+`Parameters`: Parameters are the input to the function, which you can write inside the bracket (). Always follow a `lowerCamelCase` naming convention for your function parameter.
 
+**Example 1: Function That Prints Name**
+
+```
 // writing function outside main function.
 void printName(){
   print("My name John James");
@@ -245,11 +274,14 @@ void printName(){
 void main(){
   printName();
 }
+```
 
 
-Example 2: Function To Find Sum of Two Numbers
+**Example 2: Function To Find Sum of Two Numbers**
+
 This function finds the sum of two numbers. Here, the function accepts two parameters. i.e., num1 and num2, and the return type is void.
 
+```
 void add(int num1, int num2){
   int sum = num1 + num2;
    print("The sum is $sum");
@@ -258,23 +290,25 @@ void add(int num1, int num2){
 void main(){
   add(10, 20);
 }
+```
 
+#### Key Points
 
-Key Points
-In dart function are also objects.
-You should follow the lowerCamelCase naming convention while naming function.
-You should follow the lowerCamelCase naming convention while naming function parameters.
+- In dart function are also objects.
+- You should follow the lowerCamelCase naming convention while naming function.
+- You should follow the lowerCamelCase naming convention while naming function parameters.
 
-Types Of Functions
-Functions are the block of code that performs a specific task. Here are different types of functions:
-No Parameter And No Return Type
-Parameter And No Return Type
-No Parameter And Return Type
-Parameter And Return Type
+### Types Of Functions
 
-Function With No Parameter And No Return Type
+- No Parameter And No Return Type
+- Parameter And No Return Type
+- No Parameter And Return Type
+- Parameter And Return Type
+
+## 1. Function With No Parameter And No Return Type
 In this function, you do not pass any parameter and expect no return type. Here is an example of it:
 
+```
 void main() {
   printName();
 }
@@ -282,14 +316,15 @@ void main() {
 void printName() {
   print("My name is John James.");
 }
+```
 
-
-Function With Parameter And No Return Type
+## 2. Function With Parameter And No Return Type
 
 In this function, you do pass the parameter and expect no return type. Here is an example of it:
 
 Here printName(String name) is a function which welcome person
 
+```
 void main() {
   printName("John");
 }
@@ -297,13 +332,16 @@ void main() {
 void printName(String name) {
   print("Welcome, ${name}.");
 }
-
+```
 
 In this program, printName(String name) is the function which has keyword void. It means it has no return type, and the pair of parentheses is not empty but this time that suggests it to accept an parameter.
 
-Function With No Parameter And Return Type
+
+## 3. Function With No Parameter And Return Type
+
 In this function, you do not pass any parameter but expect return type. Here is an example of it:
 Here InstructorName() is a function which returns Instructor's name. In the entire program, anyone can use this function to find the name of the Instructor
+```
 
 void main() {
 // Function With No Parameter & Return Type
@@ -313,13 +351,15 @@ void main() {
 String InstructorsName() {
   return "Allan Lenkaa";
 }
-
+```
 
 In this program, InstructorsName() is the function which has String keyword before function name, means it return String value, and the empty pair of parentheses suggests that there is no parameter that is passed to the function.
 
-Function With Parameter And Return Type
+
+## 4. Function With Parameter And Return Type
 In this function, you do pass the parameter and also expect return type. Here is an example of it:
 
+```
 // this function add two numbers
 int add(int a, int b) {
   int sum = a + b;
@@ -333,14 +373,11 @@ void main() {
   int total = add(num1, num2);
   print("The sum is $total.");
 }
+```
 
 In this program, int add(int a, int b) is the function with int as the return type, and the pair of parenthesis has two parameters, i.e., a and b.
 
-
-THE TYPES OF FUNCTIONS DISCUSSED
-
-The code snippets below indicate all the functions. Use the comments as your guidelines.
-
+```
 // parameter and return type
 int add(int a, int b) {
   var total;
@@ -374,18 +411,15 @@ void main() {
   print("Greeting: $greeting");
   greetings();
 }
+```
 
-Anonymous Functions 
+# Anonymous Functions 
 
-In the previous lesson we introduced you to functions that are defined by using a function name like main(), fullName(). In this lesson we will talk about nameless functions or functions without a name. This type of function is known as an anonymous function, lambda, or closure. An anonymous function behaves the same as a regular function, but it does not have a name with it. It can have zero or any number of arguments / parameters with an option type annotation.
+This type of function is known as an anonymous function, lambda, or closure. An anonymous function behaves the same as a regular function, but it does not have a name with it. It can have zero or any number of arguments / parameters with an option type annotation.
 
-Syntax 
-Below is the syntax of the anonymous function
+**Syntax**
 
-Example 1:
-In this example, you will learn to use an anonymous function to print all list items. This function invokes each fruit without having a function name.
-
-
+```
 void main() {
   const fruits = ["Apple", "Mango", "Banana", "Orange"];
 
@@ -393,10 +427,13 @@ void main() {
     print(fruit);
   });
 }
+```
 
-Example 2:
+**Example 2:**
+
 In this example, we will use an anonymous function to print all list items.
 
+```
 void main() {
   // list of cars
   List cars = ["BMW", "BENZ", "AUDI", "TOYOTA"];
@@ -406,20 +443,20 @@ void main() {
     print(car); // printing an item
   });
 }
+```
 
-
-Arrow Function
+# Arrow Function
 If you want to declare a function in one line; In Dart we have a fat arrow function that can enable you. The function is represented by => symbol. 
 
-Syntax 
-Below is the syntax for the arrow function
+**Syntax**
 
-Knowledge Panel 
 Note: The arrow function is used to make your code short. => expr syntax is a shorthand for { return expr; }.
 
-Example 1: Calculation of simple interest without Arrow Function
+**Example 1: Calculation of simple interest without Arrow Function**
+
 This program finds simple interest without using the arrow function.
 
+```
 // function that calculate interest
 double calculateInterest(double principal, double rate, double time) {
   double interest = principal * rate * time / 100;
@@ -433,10 +470,12 @@ void main() {
 
   double result = calculateInterest(principal, rate, time);
   print("The simple interest is $result.");
-}
+}```
 
 
 Example 1: Calculation of simple interest WITH Arrow Function
+
+```
 // arrow function that calculate interest
 double calculateInterest(double principal, double rate, double time) =>
     principal * rate * time / 100;
@@ -449,6 +488,7 @@ void main() {
   double result = calculateInterest(principal, rate, time);
   print("The simple interest is $result.");
 }
+```
 
 
 Data Types in Dart Technical Assignment
