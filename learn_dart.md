@@ -1496,10 +1496,11 @@ The hashCode comparison confirms that both manager1 and manager2 reference
 The openFile() and writeFile() methods of FileSystemManager are called on manager1 and manager2, respectively, demonstrating that both instances share the same behavior implemented by the singleton instance.
 
 
-Mixins
+# Mixins
 
 Mixins are a way of reusing a class’s code in different class hierarchies. For example, you might have a class called Employee which has methods like clockIn. The code in those classes may be useful for both Bartender and Nurse. But, now imagine you're introducing a class called Doctor. You probably have some functionality on Nurse (such as a method called takeTemperature) that you'd like on Doctor, but not that you want to add to Employee. This is a great place to use a mixin called Medical.
 
+```
 class Employee {
 void clockIn() {...}
 }
@@ -1508,19 +1509,24 @@ mixin Medical {
 int takeTemperature {...}
 }
 
-
-
 // use mixins on your classes via the `with` keyword
 class Nurse extends Employee with Medical {}
 class Doctor extends Employee with Medical {
 performSurgery() {...}
 }
 class Bartender extends Employee {}
+```
+
 With this architecture, your bartender can 'clock in', but cannot 'takeTemperature'. Both Nurse and Doctor can do both, and the doctor can performSurgery.
 
-Extension Methods
+# Extension Methods
 
-Extension methods are new as of Dart 2.7. They allow you to add functionality to existing libraries and classes. For example, you can add extra functionality to the Dart core String library, that are only available in your app.extension on DateTime {
+Extension methods are new as of Dart 2.7. 
+
+They allow you to add functionality to existing libraries and classes. For example, you can add extra functionality to the Dart core String library, that are only available in your app.extension on DateTime
+
+```
+{
   String get humanize {
     // you have access to the instance in extension methods via 'this' keyword. 
     return "${this.day}/${this.month}/${this.year}";
@@ -1531,12 +1537,13 @@ void main() {
   final dateTime = DateTime.now();
   print(dateTime.humanize);
 }
+```
 
 
-Advanced Object-Oriented Programming in Dart Challenge
+# ASSIGNMENT
 
-This challenge is designed to assess a learner's understanding of advanced object-oriented programming in Dart.
 
+```
 The challenge is to create a program that meets the following requirements:
 Create two classes, one for a student and one for a teacher.
 The student class should have a name, age and grade level.
@@ -1544,19 +1551,14 @@ The teacher class should have a name, age, and the subject they teach.
 Create a method in the student class that prints out the student's information.
 Create a method in the teacher class that prints out the teacher's information.
 Create a third class that creates a student and teacher object, and calls the methods to print out the information.
+```
+\
 
-Once the challenge is completed, the solution should be pushed to GitHub and the link should be submitted to https://forms.gle/wve1Lbk1ab8igLgQ9
+# Dart Utilities
 
+### ASSIGNMENT
 
-Dart Utilities
-
-TOPIC: Assignment
-
-Technical Assignment Challenge: Dart Utilities
-
-This technical assignment challenge is designed to assess a learner's understanding of Dart utilities. The assignment should be pushed to GitHub and the solution should be submitted via a link.
-
-The challenge consists of the following tasks:
+```
 1. Create a function that takes two numbers as input and returns the sum of those numbers.
 2. Write a program that uses a for loop to print out the numbers from 1 to 10.
 3. Create a program that uses a switch statement to check for different string values and output a response based on the value.
@@ -1564,3 +1566,4 @@ The challenge consists of the following tasks:
 5. Create a program that uses an if-else statement to check if a number is even or odd and output the result.
 6. Create a program that takes a list of numbers as input and outputs the largest number in the list.
 7. Write a program that uses a try-catch block to catch an exception and output an error message.
+```
