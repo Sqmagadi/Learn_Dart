@@ -1,21 +1,27 @@
-Dart is a programming language that is used to develop applications using the Flutter framework. Flutter is an open-source mobile application development framework that is built on top of the Dart programming language. It allows developers to build high-performance, visually attractive, and feature-rich mobile applications for Android, iOS, and web platforms.The Dart language is object-oriented and supports features such as classes, interfaces, and mixins. It also includes a garbage collector to automatically free up memory used by objects that are no longer needed.
+# Dart
+
+**Dart** is an open-source programming language developed by Google. It is used to create mobile, web and desktop applications. It is also used to develop server-side applications. Dart is a strongly typed language, which means that the compiler will detect any errors in the code before the code is compiled.
+**Dart** is a programming language that is used to develop applications using the **Flutter** framework. 
+
+*Flutter* is an open-source mobile application development framework that is built on top of the Dart programming language. It allows developers to build high-performance, visually attractive, and feature-rich mobile applications for Android, iOS, and web platforms.
+
+The Dart language is object-oriented and supports features such as classes, interfaces, and mixins. It also includes a garbage collector to automatically free up memory used by objects that are no longer needed.
+
 Flutter provides a set of pre-built widgets that can be used to create beautiful and responsive user interfaces. These widgets can be customized and combined to create complex UI elements such as buttons, forms, and dialog boxes
 
 
-Dart is an open-source programming language developed by Google. It is used to create mobile, web and desktop applications. It is also used to develop server-side applications. Dart is a strongly typed language, which means that the compiler will detect any errors in the code before the code is compiled.
-
-Dart Features 
+### Dart Features 
 Dart also has several features that make it easier to learn and use compared to other languages. For example, it has a simple syntax and a flexible type system. It also has built-in support for asynchronous programming, which makes it easier to write code that runs concurrently. Below are interesting things about Dart:
 
-Free and open-source.
-Object-oriented programming language.
-Used to develop android, iOS, web, and desktop apps fast.
-Can compile to either native code or javascript.
-Offers modern programming features like null safety and asynchronous programming.
-You can even use Dart for servers and backend.
+- Free and open-source.
+- Object-oriented programming language.
+- Used to develop android, iOS, web, and desktop apps fast.
+- Can compile to either native code or javascript.
+- Offers modern programming features like null safety and asynchronous programming.
+- You can even use Dart for servers and backend.
 
 
-Creating a basic Dart program
+### Creating a basic Dart program
 Creating a basic program in Dart that prints "Hello World" is a great way to get familiar with the Dart programming language. In this lesson, we will be walking through the steps to create a basic Dart program that prints "Hello World". 
 
 
