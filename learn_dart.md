@@ -772,10 +772,11 @@ We call the bark() and run() methods on the myDog instance to simulate the behav
 
 
 
-Example with a class Person and their details
+##### Example with a class Person and their details
+
 In this example below, there is class Person with four properties: name, phone, isMarried, and age. The class also has a method called displayInfo, which prints out the values of the four properties.
 
-
+```
 class Person {
   // Properties
   String name;
@@ -802,9 +803,11 @@ void main() {
   // Calling the displayInfo method to print information
   person.displayInfo();
 }
+```
 
-Example with a class Area
+##### Example with a class Area
 
+```
 class Area {
   // Properties
   double length;
@@ -826,17 +829,15 @@ void main() {
   // Calculating and printing the area
   print('Area of the rectangle: ${rectangle.calculateArea()} square units');
 }
+```
 
+- We declare a class Area with properties length and width.
+- We define a constructor to initialize these properties.
+- We define a method calculateArea() to compute the area of the rectangle.
+- In the main() function, we create an instance of Area called rectangle with length 5.0 units and width 3.0 units.
+- We then call the calculateArea() method on the rectangle object to calculate its area and print the result.
 
-In this example:
-
-We declare a class Area with properties length and width.
-We define a constructor to initialize these properties.
-We define a method calculateArea() to compute the area of the rectangle.
-In the main() function, we create an instance of Area called rectangle with length 5.0 units and width 3.0 units.
-We then call the calculateArea() method on the rectangle object to calculate its area and print the result.
-
-KEY POINTS ON CLASS
+**KEY POINTS ON CLASS**
 
 1. The class keyword is used to declare the class.
 2. The class serves as an object creation template.
@@ -844,11 +845,12 @@ KEY POINTS ON CLASS
 4. The terms fields, attributes, and data members are other terms for the properties.
 5. The behaviors or member functions are another name for the methods.
 
-Objects in DART
+# Objects in DART
 Programming in Dart is object-oriented; everything is handled as an object. A variable or instance of a class that is used to access the properties of the class is called an object. State and behavior are two characteristics of an object. Let's say a man is an item with a name, age, and level of health as well as a behavior (running, walking, and sleeping). Programming objects have states and behaviors, much like real-world things do in theory. A class is a template from which an object is produced.
 
-Example given
+**Example**
 
+```
 // Define a class representing an Animal
 class Animal {
   // Properties
@@ -876,12 +878,12 @@ void main() {
   print('${dog.name} is a ${dog.species}.');
   dog.makeSound();
 }
+```
+
+In this Dart code, we have a class called Animal, which acts as a blueprint for creating objects that represent different animals. Each Animal object has properties like name and species, and it can perform actions using methods like makeSound(). In our program, we create two instances (objects) of the Animal class: one representing a cat and another representing a dog. We set specific values for the properties of each object, such as their names and species. Then, we use the objects to call the makeSound() method, simulating the animals making sounds. This example demonstrates how classes and objects work together to model real-world entities in code.
 
 
-n this Dart code, we have a class called Animal, which acts as a blueprint for creating objects that represent different animals. Each Animal object has properties like name and species, and it can perform actions using methods like makeSound(). In our program, we create two instances (objects) of the Animal class: one representing a cat and another representing a dog. We set specific values for the properties of each object, such as their names and species. Then, we use the objects to call the makeSound() method, simulating the animals making sounds. This example demonstrates how classes and objects work together to model real-world entities in code.
-
-
-A deep dive
+# A deep dive
 Modern applications basically all do the same thing: they give us (smart humans) a way to process and collaborate over large data sets. Some apps are about communication, like social media and email. Some are about organization, such as calendars and note taking. Some are simply digital interfaces into a part of the real world that's hard for programmers to navigate, like dating apps. But they all do the same thing. They give users a nice way to interact with data.
 
 Data represents the real world. All data describes something real. That's what object-oriented programming is all about: it gives us a nice way to model our data after real-world objects. It takes data, which dumb computers like, and adds some abstraction so smart humans can impose our will onto the computers. It makes code easy to read, easy to reason about, and highly reusable.
@@ -890,34 +892,53 @@ When writing Dart code, you'll likely want to create separate classes for everyt
 
 Consider if we were writing a point-of-sale (POS) system used to sell goods to customers. What kinds of classes do you think you'd need to represent "things" (or data)? What kind of "things" does a POS app need to know about? Perhaps we need classes to represent a Customer, Business, Employee, Product, and Money. Those are all classes that represent real-world things. But it gets a bit hairier from here.
 Ponder some questions with me:
+
 We may want a class for Transaction and Sale. In real life, a transaction is a process or event. Should this be represented with a function or a class?
+
 If we're selling bananas, should we use a Product class and give it a property that describes what type of product it is? Or should we have a Banana class?
+
 Should we define a top-level variable or a class that has only a single property? For instance, if we need to write a function that simply adds two numbers together, should we define a Math class with an add method, or just write the method as a static, global variable?
+
 Ultimately, these decisions are up to you, the programmer. There is no single right answer.
+
 My rule of thumb is, "When in doubt, make a new class." Recall those previous questions: should a transaction be represented by a function of Business or its own class? I'd say make it a class. And that brings me all the way back to why I used the vague word thing earlier. A thing isn't just a physical object; it can be an idea, an event, a logical grouping of adjectives, and so on. In this example, I would make a class that looks like this:
+
+```
 class TransactionEvent {
 // properties and methods
 }
+```
+
 And that might be it. It might have no properties and no methods. Creating classes for events makes the type safety of Dart that much more effective.
 
 The bottom line is that you can (and, I'd argue, should) make a class that represents any "thing" that isn't obviously an action you can do or a word you'd use to describe some detail of a "thing." For instance, you (a human) can exchange money with someone. It makes sense to say "I exchange money." It doesn't make sense to say, "I transaction," even though a transaction is an idea. Having a Transaction class makes sense, but an ExchangeMoney class doesn't.
 
-Object Oriented Programming in DART
+# Object Oriented Programming in DART
+
 Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic. An object can be defined as a data field that has unique attributes and behavior.
 
-Components of OOP,
-Constructor
-A constructor in programming is a special method or function that is automatically called when an object is created.
-Initializes the object's properties or performs any desired configuration.
-Constructors are essential for creating class instances in object-oriented programming.
-In Dart, constructors are defined with the same name as the class.
-There are two main types of constructors in dart:
+### Components of OOP
 
-Default constructor: A default constructor is automatically created if no other constructor is specified.
+1. Constructor
+A constructor in programming is a special method or function that is automatically called when an object is created.
+
+Initializes the object's properties or performs any desired configuration.
+
+
+Constructors are essential for creating class instances in object-oriented programming.
+
+In Dart, constructors are defined with the same name as the class.
+
+**There are two main types of constructors in dart:**
+
+- **Default constructor**: A default constructor is automatically created if no other constructor is specified.
+
 No parameter required.
+
 Initializes instance variables to their default values ​​(null for objects, 0 for integers, etc.
 ).
 
+```
 class MyDetails {
   // Default constructor
   MyDetails() {
@@ -929,6 +950,7 @@ void main() {
   // Creating an instance of MyDetails using the default constructor
   var myDetails = MyDetails();
 }
+```
 
 In this example:
 The MyDetails class has a default constructor, which doesn't take any parameters.
@@ -936,8 +958,9 @@ Inside the constructor, you can add any initialization code if needed.
 In the main() function, an instance of MyDetails named myDetails is created using the default constructor.
 
 
-Parameterized Constructors: Parameterized constructors allow you to pass a value during object creation, allowing you to initialize instance variables with specific values.
+- **Parameterized Constructors**: Parameterized constructors allow you to pass a value during object creation, allowing you to initialize instance variables with specific values.
 
+```
 // Define a class named Dog
 class Dog {
   // Declare instance variables for name, age, and breed
@@ -975,22 +998,26 @@ void main() {
   // Call the sleep method of the Dog class
   myDog.sleep();
 }
+```
 
-Object Oriented Programming Paradigm
-Data Encapsulation
-Data encapsulation is the process of keeping a class' implementation details hidden from the user through an object's functions.
-How To Achieve Encapsulation In Dart
+### Object Oriented Programming Paradigm
+
+1. Data Encapsulation
+**Data encapsulation** is the process of keeping a class' implementation details hidden from the user through an object's functions.
+
+**How To Achieve Encapsulation In Dart**
+
 Encapsulation can be achieved by:
-Declaring the class properties as private by using underscore(_).
-Providing public getter and setter methods to access and update the value of private property.
 
-Getter and Setter Methods
-Getter and setter methods are used to access and update the value of private property. Getter methods are used to access the value of private property. Setter methods are used to update the value of private property.
+- Declaring the class properties as private by using underscore(_).
+- Providing public getter and setter methods to access and update the value of private property.
 
+2. Getter and Setter Methods
+**Getter and setter** methods are used to access and update the value of private property.
 
-Code sample
+Getter methods are used to access the value of private property. Setter methods are used to update the value of private property.
 
-
+```
 class Circle {
 
 // Private variable
@@ -1003,7 +1030,6 @@ double _radius;
 // Constructor
 
 Circle(this._radius);
-
 
 
 // Getter for the radius
@@ -1026,8 +1052,6 @@ print('Invalid radius. It must be greater than 0.');
 
 }
 
-
-
 // Method to calculate the area
 
 double calculateArea() {
@@ -1038,26 +1062,20 @@ return 3.14 * _radius * _radius;
 
 }
 
-
-
 void main() {
 
 // Create an instance/object  of the Circle class
 
 Circle myCircle = Circle(5.0);
 
-
-
 // Access the radius using the getter
 
 print('Initial Radius of the Circle: ${myCircle.radius}');
 
 
-
 // Update the radius using the setter(for updates)
 
 myCircle.radius = 7.0;
-
 
 
 // Access the updated radius and calculate the area
@@ -1067,21 +1085,26 @@ print('Updated/New  Radius: ${myCircle.radius}');
 print('Area: ${myCircle.calculateArea()}');
 
 }
+```
 
+**Explanation**
 
-Explanation
 The Circle class has a private variable _radius, which is not directly accessible from outside the class.
+
 The constructor initializes the _radius variable.
+
 Getter (get radius) allows external code to access the value of _radius.
+
 Setter (set radius) provides controlled access to update the value of _radius with validation.
+
 The calculateArea method demonstrates how methods can use the encapsulated data.
 
 
-Inheritance
+3. Inheritance
+
 Generally speaking, inheritance is the process of gaining properties. OOP allows for the inheritance of properties from one object to another.
-Code sample
 
-
+```
 //PARENT CLASS VEHICLE
 
 class Vehicle {
@@ -1121,13 +1144,11 @@ print('Car Information is : $year $brand $model');
 }
 
 
-
 void main() {
 
 // Create an instance/object  of the Car class
 
 Car myCar = Car('Toyota', 'Camry', 2022);
-
 
 
 // Access and display information using methods from both Vehicle and Car classes
@@ -1137,17 +1158,22 @@ myCar.displayInfo();
 myCar.displayCarInfo();
 
 }
-
+```
 
 The Vehicle class is the base class with instance variables brand and year, and a method displayInfo.
+
 The Car class is the derived class that extends (inherits from) the Vehicle class. It adds an additional property model and a method displayCarInfo.
+
 The Car constructor uses super to call the constructor of the base class (Vehicle).
+
 The main function demonstrates creating an instance of the Car class and accessing methods from both the base and derived classes.
 
 
-Polymorphism
-Polymorphism is the practice of having many classes use the same method name while redefining it for the derived classes.
+4. Polymorphism
 
+**Polymorphism** is the practice of having many classes use the same method name while redefining it for the derived classes.
+
+```
 class Animal {
 
 void makeSound() {
@@ -1157,8 +1183,6 @@ print('All animals have a sound');
 }
 
 }
-
-
 
 // Derived class 1
 
@@ -1175,7 +1199,6 @@ print('Woof!');
 }
 
 
-
 // Derived class 2
 
 class Cat extends Animal {
@@ -1190,8 +1213,6 @@ print('Meows!');
 
 }
 
-
-
 void main() {
 
 // Create instances/objects  of the derived classes
@@ -1201,7 +1222,6 @@ Animal genericAnimal = Animal();
 Dog myDog = Dog();
 
 Cat myCat = Cat();
-
 
 
 // Polymorphism in action
@@ -1215,26 +1235,36 @@ myDog.makeSound(); // Output: Woof!
 myCat.makeSound(); // Output: Meow!
 
 }
+```
 
+**Explanation**
 
-Explanation
 The Animal class is the base class with a method makeSound.
+
 The Dog and Cat classes are derived classes that override the makeSound method with their own implementations.
+
 In the main function, instances of Animal, Dog, and Cat are created.
+
 The makeSound method is called on each object, demonstrating polymorphism as the appropriate version of the method is invoked based on the actual type of the object.
 
 
-Abstraction
-Abstraction refers to the user’s interaction with just a subset of an object’s characteristics and operations. To access a complicated item, abstraction uses simpler, high-level techniques.
+5. Abstraction
+
+**Abstraction** refers to the user’s interaction with just a subset of an object’s characteristics and operations. To access a complicated item, abstraction uses simpler, high-level techniques.
+
 Simple items are used to show complexity.
+
 Keep complicated information hidden from the user.
+
 Simple classes are used to indicate complexity in abstraction. Encapsulation is an extension of abstraction.
-Advantages of Abstraction
-It simplifies the process of seeing things in their entirety.
-Code duplication is avoided, and reusability is increased.
-Because just the most necessary information is shown to the user, it helps to enhance the security of an application or software.
 
+##### Advantages of Abstraction
 
+- It simplifies the process of seeing things in their entirety.
+- Code duplication is avoided, and reusability is increased.
+- Because just the most necessary information is shown to the user, it helps to enhance the security of an application or software.
+
+```
 // Abstract class
 
 abstract class Shape {
@@ -1254,17 +1284,13 @@ print('This is a shape.');
 }
 
 
-
 // Concrete class 1
 
 class Circle extends Shape {
 
 double radius;
 
-
-
 Circle(this.radius);
-
 
 
 @override
@@ -1278,7 +1304,6 @@ return 3.14 * radius * radius;
 }
 
 
-
 // Concrete class 2
 
 class Rectangle extends Shape {
@@ -1286,10 +1311,7 @@ class Rectangle extends Shape {
 double width, height;
 
 
-
 Rectangle(this.width, this.height);
-
-
 
 @override
 
@@ -1301,8 +1323,6 @@ return width * height;
 
 }
 
-
-
 void main() {
 
 // Create instances of concrete classes
@@ -1310,7 +1330,6 @@ void main() {
 Circle myCircle = Circle(5.0);
 
 Rectangle myRectangle = Rectangle(4.0, 6.0);
-
 
 
 // Use the common interface provided by the abstract class
@@ -1328,20 +1347,25 @@ myCircle.printInfo();
 myRectangle.printInfo();
 
 }
+```
 
-
-Explanation
+6. Explanation
 The Shape class is an abstract class with an abstract method calculateArea() and a concrete method printInfo().
+
 The Circle and Rectangle classes are concrete classes that extend the Shape class and provide implementations for the abstract method.
+
 In the main function, instances of Circle and Rectangle are created and used through the common interface provided by the Shape abstract class.
 
 
-Factory Methods
+**Factory Methods**
 
 In Dart, factory constructors or methods are used to provide alternative ways to create instances of a class. They are useful when you need to control the instantiation process or return an instance of a subclass.
+
 Factory constructors do use the return key word.
+
 You cannot refer to 'this' within the factory constructor.
 
+```
 import 'dart:math';
 
 class Circle {
@@ -1372,32 +1396,44 @@ void main() {
   print('Area of Circle 1: ${circle1.calculateArea()}');
   print('Area of Circle 2: ${circle2.calculateArea()}');
 }
+```
 
+**Explanation:**
 
-Explanation:
-1.Circle Class:
+1. Circle Class:
+
 The Circle class represents a circle with a given radius.
+
 It has an instance variable radius to store the radius of the circle.
+
 The constructor Circle(this.radius) initializes the radius variable when an instance of Circle is created
-2.Factory Method:
-The Circle class contains a factory method create that takes a radius parameter.
+
+2. Factory Method:
+
+The Circle class contains a factory method create that takes a radius parameter. 
+
 It ensures that the radius is positive and then creates and returns a new instance of Circle with the given radius.
+
 If the provided radius is not positive, it throws an ArgumentError.
-3.Calculate Area Method:
+
+3. Calculate Area Method:
+
 The calculateArea() method calculates the area of the circle using the formula pi * radius * radius.
-4.Main Function:
+
+4. Main Function:
+
 In the main() function:We create instances of Circle using the factory method Circle.create() with different radii.
+
 We call the calculateArea() method on each circle instance to calculate and print its area.
 
 
-Singletons
-
+# Singletons
 
 The singleton pattern is a pattern used in object-oriented programming which ensures that a class has only one instance and also provides a global point of access to it. Sometimes it's important for a class to have exactly one instance, or you might force your app into a weird state. For example, you only want one instance of a class that represents your local storage, or you may end up with two different sources of data, which are out of sync. For the same reason, an operating system should have exactly one file system.
 
 The idea is that anywhere in your code that you call MyClass(), it will return the same instance of that class, with the same state, etc. Thanks to factory constructors, implementing the singleton pattern in Dart is not only possible, but simple and flexible.
 
-
+```
 class FileSystemManager {
   // Static final variable to hold the single instance of the class
   static final FileSystemManager _instance = FileSystemManager._internal();
@@ -1434,19 +1470,29 @@ void main() {
   manager1.openFile(); // Output: File opened.
   manager2.writeFile(); // Output: File written.
 }
+```
 
+1. Singleton Design Pattern:
 
-1.Singleton Design Pattern:
 The FileSystemManager class is implemented using the Singleton design pattern, which ensures that there is only one instance of the class throughout the application's lifecycle.
-2.Static Instance Variable:
+
+2. Static Instance Variable:
+
 The _instance variable is declared as static and final, meaning it is associated with the class itself rather than with instances of the class. This variable holds the single instance of the FileSystemManager class.
-3.Private Constructor:
+
+3. Private Constructor:
+
 The _internal constructor is private, indicated by the underscore _, meaning it can only be accessed from within the FileSystemManager class. This constructor is used for initialization logic and is called only once to create the singleton instance of the class.
-4.Factory Constructor:
+
+4. Factory Constructor:
+
 The FileSystemManager class provides a factory constructor that ensures only one instance of the class is returned. This factory constructor checks if _instance is null, and if so, it creates a new instance using the private _internal constructor. Otherwise, it returns the existing instance.
-5.Usage:
+
+5. Usage:
+
 In the main() function, two instances of FileSystemManager named manager1 and manager2 are created.
 The hashCode comparison confirms that both manager1 and manager2 reference the same singleton instance, as expected in a Singleton pattern.
+
 The openFile() and writeFile() methods of FileSystemManager are called on manager1 and manager2, respectively, demonstrating that both instances share the same behavior implemented by the singleton instance.
 
 
