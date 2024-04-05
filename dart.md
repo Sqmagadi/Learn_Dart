@@ -39,11 +39,24 @@ You can install Dart on Windows, Mac, and Linux or run it from the browser.
 
 # Basic Dart Program
 
+### Steps To Create Dart Project
+
+1. Create a New Dart Project
+
+Once you have installed the Dart SDK, you can create a new Dart project. This can be done using an IDE (Integrated Development Environment) such as Visual Studio Code or IntelliJ.
+
+Name your file with a `.dart` extension
+
+`myapp.dart`
+
+2. Write the Program
+
 ```
 void main() { 
-   print("Hello World!"); 
+   print("Hello World!"); 
 }
-``` 
+```
+
 - This is a simple dart program that prints *Hello World* on screen.
 - **void main()**is the starting point where the execution of your program begins.
 - Every program starts with a **main** function.

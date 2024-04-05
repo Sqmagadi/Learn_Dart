@@ -21,34 +21,7 @@ Dart also has several features that make it easier to learn and use compared to 
 - You can even use Dart for servers and backend.
 
 
-### Creating a basic Dart program
 
-
-#### Step 1: Create a New Dart Project
-
-Once you have installed the Dart SDK, you can create a new Dart project. This can be done using an IDE (Integrated Development Environment) such as Visual Studio Code or IntelliJ.
-
-Name your file with a `.dart` extension
-
-`myapp.dart`
-
-#### Step 2: Write the Program
-
-```
-void main() { 
-   print("Hello World!"); 
-}
-```
-
-
-# Variables In Dart
-
-Variables are containers used to store value in the program. There are different types of variables where you can keep different kinds of values. 
-
-```
-// here variable name contains value Bella.
-var name = "Bella";
-```
 
 #### Variables Types In Dart
 
