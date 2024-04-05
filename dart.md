@@ -185,22 +185,21 @@ var fullName = "John Doe";
 const pi = 3.14;
 ```
 
+# DATA TYPES IN DART
 
-DATA TYPES IN DART
-Data Types
 Data types help you to categorize all the different types of data you use in your code. For e.g. numbers, texts, symbols, etc. The data type specifies what type of value will be stored by the variable. Each variable has its data type. Dart supports the following built-in data types :
 
-Numbers
-Strings
-Booleans
-Lists
-Maps
-Sets
-Runes
-Null
-Built-In Types
+1. Numbers
+2. Strings
+3. Booleans
+4. Lists
+5. Maps
+6. Sets
+7. Runes
+9. Null
+10. Built-In Types
 
-In Dart language, there is the type of values that can be represented and manipulated. The data type classification is as given below:
+In Dart language, there is the type of values that can be represented and manipulated. 
 
 Data Type	Keyword	Description
 Numbers	int, double, num	It represents numeric values
