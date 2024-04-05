@@ -74,6 +74,43 @@ First, open the project location on the command/terminal and run the project wit
 
 `dart run`
 
+# Comments in Dart
+
+Comments are a great way to enhance the readability of your Dart code and make it easier to understand. In Dart, there are two types of comments: **single-line** and **multi-line** comments.
+
+*Single-line Comments*
+
+Single-line comments start with two forward slashes (`//`). Everything after the two forward slashes is ignored by the compiler. 
+
+```
+void main() {
+// declaring variables
+String name = "John"; 
+   
+// printing variables value   
+print("Name is $name");
+}
+```
+
+*Multi-line Comments*
+
+Multi-line comments start with a forward slash and an asterisk (`/*`) and end with an asterisk and a forward slash (`*/`). Anything between the starting and ending delimiters is ignored by the compiler. 
+
+```
+void main() {
+// declaring variables
+String name = "John"; 
+
+/* String address = "Kenya";  
+num age = 20; 
+num height = 5.9;
+bool isMarried = false;  */
+   
+// printing variables value   
+print("Name is $name");
+}
+```
+
 # VARIABLES IN DART
 
 Variables are containers used to store value in the program. There are different types of variables where you can keep different kinds of values. 
