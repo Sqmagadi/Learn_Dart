@@ -410,10 +410,10 @@ Value of doublevalue is 1.1
 Type of doublevalue is double
 ```
 
-
-Convert Int To String In Dart
+3. Convert Int To String In Dart
 You can convert int to String using the toString() method. Here is example:
 
+```
 void main() {
 int one = 1;
 print("Type of one is ${one.runtimeType}");
@@ -422,12 +422,20 @@ print("Value of oneInString is $oneInString");
 // this will print data type
 print("Type of oneInString is ${oneInString.runtimeType}");
 }
-targets
+```
 
- Show Output
-Convert Double To Int In Dart
+**Output**
+
+```
+Type of one is int
+Value of oneInString is 1
+Type of oneInString is String
+```
+
+4. Convert Double To Int In Dart
 You can convert double to int using the toInt() method.
 
+```
 void main() { 
    double num1 = 10.01;
    int num2 = num1.toInt(); // converting double to int
@@ -435,10 +443,16 @@ void main() {
   print("The value of num1 is $num1. Its type is ${num1.runtimeType}");
   print("The value of num2 is $num2. Its type is ${num2.runtimeType}");
 }
-targets
+```
 
- Show Output
-Booleans
+**Output**
+
+```
+The value of num1 is 10.01. Its type is double
+The value of num2 is 10. Its type is int
+```
+
+2. Booleans
 In Dart, boolean holds either true or false value. You can write the bool keyword to define the boolean data type. You can use boolean if the answer is true or false. Consider the answer to the following questions:
 
 Are you married?
@@ -448,16 +462,22 @@ Is the traffic light green?
 Are you older than your father?
 These all are yes/no questions. Its a good idea to store them in boolean.
 
+```
 void main() {
 bool isMarried = true;
 print("Married Status: $isMarried");
 }
-targets
+```
 
- Show Output
-Lists
+**Output**
+
+`Married Status: true`
+
+3. Lists
+
 The list holds multiple values in a single variable. It is also called arrays. If you want to store multiple values without creating multiple variables, you can use a list.
 
+```
 void main() {
 List<String> names = ["Raj", "John", "Max"];
 print("Value of names is $names");
@@ -469,28 +489,41 @@ print("Value of names[2] is ${names[2]}"); // index 2
 int length = names.length;  
 print("The Length of names is $length");
 }
-targets
+```
 
- Show Output
- Info
+**Output**
+
+```
+Value of names is [Raj, John, Max]
+Value of names[0] is Raj
+Value of names[1] is John
+Value of names[2] is Max
+The Length of names is 3
+```
+
 Note: List index always starts with 0. Here names[0] is Raj, names[1] is John and names[2] is Max.
 
-Sets
+4. Sets
 An unordered collection of unique items is called set in dart. You can store unique data in sets.
 
- Info
+
 Note: Set doesn’t print duplicate items.
 
+```
 void main() {
 Set<String> weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 print(weekday);
 }
-targets
+```
 
- Show Output
-Maps
+**Output**
+
+`{Sun, Mon, Tue, Wed, Thu, Fri, Sat}`
+
+5. Maps
 In Dart, a map is an object where you can store data in key-value pairs. Each key occurs only once, but you can use same value multiple times.
 
+```
 void main() {
 Map<String, String> myDetails = {
    'name': 'John Doe',
@@ -500,9 +533,11 @@ Map<String, String> myDetails = {
 // displaying the output
 print(myDetails['name']);
 }
-targets
+```
 
- Show Output
+**Output**
+
+
 Var Keyword In Dart
 In Dart, var automatically finds a data type. In simple terms, var says if you don’t want to specify a data type, I will find a data type for you.
 
