@@ -201,16 +201,16 @@ Data types help you to categorize all the different types of data you use in you
 
 In Dart language, there is the type of values that can be represented and manipulated. 
 
-|Data Type | Keyword |	Description |
-| ---------- | ---------- | ---------- |
-| Numbers |	int, double, num | It represents numeric values |
-|Strings |	String | It represents a sequence of characters |
-| Booleans | bool |	It represents Boolean values true and false |
-| Lists |	List | It is an ordered group of items |
-| Maps |	Map | It represents a set of values as key-value pairs |
-| Sets |	Set | It is an unordered list of unique values of same types |
-| Runes |	runes |	It represents Unicode values of String |
-| Null |	null | It represents null value |
+| |Data Type | Keyword |	Description |
+| ----- | ---------- | ---------- | ---------- |
+| 1. | Numbers |	int, double, num | It represents numeric values |
+| 2. | Strings |	String | It represents a sequence of characters |
+| 3. | Booleans | bool |	It represents Boolean values true and false |
+| 4. | Lists |	List | It is an ordered group of items |
+| 5. | Maps |	Map | It represents a set of values as key-value pairs |
+| 6. | Sets |	Set | It is an unordered list of unique values of same types |
+| 7. | Runes |	runes |	It represents Unicode values of String |
+| 8. | Null |	null | It represents null value |
 
 Numbers
 
