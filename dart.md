@@ -184,3 +184,320 @@ var fullname = "John Doe";
 var fullName = "John Doe";
 const pi = 3.14;
 ```
+
+
+DATA TYPES IN DART
+Data Types
+Data types help you to categorize all the different types of data you use in your code. For e.g. numbers, texts, symbols, etc. The data type specifies what type of value will be stored by the variable. Each variable has its data type. Dart supports the following built-in data types :
+
+Numbers
+Strings
+Booleans
+Lists
+Maps
+Sets
+Runes
+Null
+Built-In Types
+
+In Dart language, there is the type of values that can be represented and manipulated. The data type classification is as given below:
+
+Data Type	Keyword	Description
+Numbers	int, double, num	It represents numeric values
+Strings	String	It represents a sequence of characters
+Booleans	bool	It represents Boolean values true and false
+Lists	List	It is an ordered group of items
+Maps	Map	It represents a set of values as key-value pairs
+Sets	Set	It is an unordered list of unique values of same types
+Runes	runes	It represents Unicode values of String
+Null	null	It represents null value
+Numbers
+
+When you need to store numeric value on dart, you can use either int or double. Both int and double are subtypes of num. You can use num to store both int or double value.
+
+void main() {
+// Declaring Variables  
+int num1 = 100; // without decimal point.
+double num2 = 130.2; // with decimal point.
+num num3 = 50;
+num  num4 = 50.4;  
+
+// For Sum   
+num sum = num1 + num2 + num3 + num4;
+   
+// Printing Info   
+print("Num 1 is $num1");
+print("Num 2 is $num2");  
+print("Num 3 is $num3");  
+print("Num 4 is $num4");  
+print("Sum is $sum");  
+   
+}
+targets
+
+ Show Output
+Round Double Value To 2 Decimal Places
+The .toStringAsFixed(2) is used to round the double value upto 2 decimal places in dart. You can round to any decimal places by entering numbers like 2, 3, 4, etc.
+
+void main() {
+// Declaring Variables
+double price = 1130.2232323233233; // valid.
+print(price.toStringAsFixed(2));
+}
+targets
+
+ Show Output
+String
+String helps you to store text data. You can store values like I love dart, New York 2140 in String. You can use single or double quotes to store string in dart.
+
+void main() {
+// Declaring Values     
+String schoolName = "Diamond School";
+String address = "New York 2140";   
+
+// Printing Values
+print("School name is $schoolName and address is $address");   
+}
+targets
+
+ Show Output
+Create A Multi-Line String In Dart
+If you want to create a multi-line String in dart, then you can use triple quotes with either single or double quotation marks.
+
+void main() {
+// Multi Line Using Single Quotes   
+String multiLineText = '''
+This is Multi Line Text
+with 3 single quote
+I am also writing here.
+''';
+   
+// Multi Line Using Double Quotes   
+String otherMultiLineText = """
+This is Multi Line Text
+with 3 double quote
+I am also writing here.
+""";
+   
+// Printing Information   
+print("Multiline text is $multiLineText");
+print("Other multiline text is $otherMultiLineText");
+}
+targets
+
+ Show Output
+Special Character In String
+Special Character	Work
+\n	New Line
+\t	Tab
+void main() {
+   
+// Using \n and \t   
+print("I am from \nUS.");
+print("I am from \tUS.");
+}
+targets
+
+ Show Output
+Create A Raw String In Dart
+You can also create raw string in dart. Special characters won’t work here. You must write r after equal sign.
+
+void main() {
+// Set price value
+num price = 10;
+String withoutRawString = "The value of price is \t $price"; // regular String
+String withRawString =r"The value of price is \t $price"; // raw String
+
+print("Without Raw: $withoutRawString"); // regular result
+print("With Raw: $withRawString"); // with raw result
+
+}
+targets
+
+ Show Output
+Type Conversion In Dart
+In dart, type conversion allows you to convert one data type to another type. For e.g. to convert String to int, int to String or String to bool, etc.
+
+Convert String To Int In Dart
+You can convert String to int using int.parse() method. The method takes String as an argument and converts it into an integer.
+
+void main() {
+String strvalue = "1";
+print("Type of strvalue is ${strvalue.runtimeType}");   
+int intvalue = int.parse(strvalue);
+print("Value of intvalue is $intvalue");
+// this will print data type
+print("Type of intvalue is ${intvalue.runtimeType}");
+}
+targets
+
+ Show Output
+Convert String To Double In Dart
+You can convert String to double using double.parse() method. The method takes String as an argument and converts it into a double.
+
+void main() {
+String strvalue = "1.1";
+print("Type of strvalue is ${strvalue.runtimeType}");
+double doublevalue = double.parse(strvalue);
+print("Value of doublevalue is $doublevalue");
+// this will print data type
+print("Type of doublevalue is ${doublevalue.runtimeType}");
+}
+targets
+
+ Show Output
+Convert Int To String In Dart
+You can convert int to String using the toString() method. Here is example:
+
+void main() {
+int one = 1;
+print("Type of one is ${one.runtimeType}");
+String oneInString = one.toString(); 
+print("Value of oneInString is $oneInString");
+// this will print data type
+print("Type of oneInString is ${oneInString.runtimeType}");
+}
+targets
+
+ Show Output
+Convert Double To Int In Dart
+You can convert double to int using the toInt() method.
+
+void main() { 
+   double num1 = 10.01;
+   int num2 = num1.toInt(); // converting double to int
+
+  print("The value of num1 is $num1. Its type is ${num1.runtimeType}");
+  print("The value of num2 is $num2. Its type is ${num2.runtimeType}");
+}
+targets
+
+ Show Output
+Booleans
+In Dart, boolean holds either true or false value. You can write the bool keyword to define the boolean data type. You can use boolean if the answer is true or false. Consider the answer to the following questions:
+
+Are you married?
+Is the door open?
+Does a cat fly?
+Is the traffic light green?
+Are you older than your father?
+These all are yes/no questions. Its a good idea to store them in boolean.
+
+void main() {
+bool isMarried = true;
+print("Married Status: $isMarried");
+}
+targets
+
+ Show Output
+Lists
+The list holds multiple values in a single variable. It is also called arrays. If you want to store multiple values without creating multiple variables, you can use a list.
+
+void main() {
+List<String> names = ["Raj", "John", "Max"];
+print("Value of names is $names");
+print("Value of names[0] is ${names[0]}"); // index 0
+print("Value of names[1] is ${names[1]}"); // index 1
+print("Value of names[2] is ${names[2]}"); // index 2
+
+  // Finding Length of List 
+int length = names.length;  
+print("The Length of names is $length");
+}
+targets
+
+ Show Output
+ Info
+Note: List index always starts with 0. Here names[0] is Raj, names[1] is John and names[2] is Max.
+
+Sets
+An unordered collection of unique items is called set in dart. You can store unique data in sets.
+
+ Info
+Note: Set doesn’t print duplicate items.
+
+void main() {
+Set<String> weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+print(weekday);
+}
+targets
+
+ Show Output
+Maps
+In Dart, a map is an object where you can store data in key-value pairs. Each key occurs only once, but you can use same value multiple times.
+
+void main() {
+Map<String, String> myDetails = {
+   'name': 'John Doe',
+   'address': 'USA',
+   'fathername': 'Soe Doe'
+};
+// displaying the output
+print(myDetails['name']);
+}
+targets
+
+ Show Output
+Var Keyword In Dart
+In Dart, var automatically finds a data type. In simple terms, var says if you don’t want to specify a data type, I will find a data type for you.
+
+void main(){
+
+var name = "John Doe"; // String
+var age = 20; // int
+
+print(name);
+print(age);
+}
+targets
+
+ Show Output
+Runes In Dart
+With runes, you can find Unicode values of String. The Unicode value of a is 97, so runes give 97 as output.
+
+void main() {
+
+String value = "a";
+print(value.runes);
+}
+targets
+
+ Show Output
+How To Check Runtime Type
+You can check runtime type in dart with .runtimeType after the variable name.
+
+void main() { 
+   var a = 10;
+   print(a.runtimeType); 
+   print(a is int); // true
+}
+targets
+
+ Show Output
+Optionally Typed Language
+You may have heard of the statically-typed language. It means the data type of variables is known at compile time. Similarly, dynamically-typed language means data types of variables are known at run time. Dart supports dynamic and static types, so it is called optionally-typed language.
+
+Statically Typed
+A language is statically typed if the data type of variables is known at compile time. Its main advantage is that the compiler can quickly check the issues and detect bugs.
+
+void main() { 
+   var myVariable = 50; // You can also use int instead of var
+   myVariable = "Hello"; // this will give error
+   print(myVariable);
+}
+targets
+
+ Show Output
+Dynamically Typed Example
+A language is dynamically typed if the data type of variables is known at run time.
+
+void main() { 
+   dynamic myVariable = 50;
+   myVariable = "Hello";
+   print(myVariable);
+}
+targets
+
+ Show Output
+ Info
+Note: Using static type helps you to prevent writing silly mistakes in code. It’s a good habit to use static type in dart.
