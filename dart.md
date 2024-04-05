@@ -41,7 +41,11 @@ You can install Dart on Windows, Mac, and Linux or run it from the browser.
 
 ### Steps To Create Dart Project
 
-1. Create a New Dart Project
+1. Open folder location on command prompt/terminal.
+2. Type dart create project_name (For E.g. dart create first_app)
+3. Type cd first_app
+4. Type code . to open project with visual studio code
+5. To check the main dart file go to bin/first_app.dart and edit your code.
 
 Once you have installed the Dart SDK, you can create a new Dart project. This can be done using an IDE (Integrated Development Environment) such as Visual Studio Code or IntelliJ.
 
@@ -49,7 +53,7 @@ Name your file with a `.dart` extension
 
 `myapp.dart`
 
-2. Write the Program
+6. Write the Program
 
 ```
 void main() { 
@@ -63,3 +67,9 @@ void main() {
 - The curly braces **{}** represent the beginning and the ending of a block of code.
 - **print(“Hello World!”);** prints Hello World! on screen.
 - Each code statement must end with a semicolon (**;**).
+
+
+7. Run Dart Project
+First, open the project location on the command/terminal and run the project with this command.
+
+`dart run`
