@@ -318,21 +318,33 @@ I am also writing here.
 ```
 
 #### Special Character In String
-Special Character	Work
-\n	New Line
-\t	Tab
+| Special Character	| Work |
+| ----- | ----- |
+| \n |	New Line |
+| \t |	Tab |
+
+
+```
 void main() {
    
 // Using \n and \t   
 print("I am from \nUS.");
 print("I am from \tUS.");
 }
-targets
+```
 
- Show Output
-Create A Raw String In Dart
+**Output**
+
+```
+I am from 
+US.
+I am from 	US.
+```
+
+#### Create A Raw String In Dart
 You can also create raw string in dart. Special characters won’t work here. You must write r after equal sign.
 
+```
 void main() {
 // Set price value
 num price = 10;
@@ -343,15 +355,22 @@ print("Without Raw: $withoutRawString"); // regular result
 print("With Raw: $withRawString"); // with raw result
 
 }
-targets
+```
 
- Show Output
-Type Conversion In Dart
+**Output**
+
+```
+Without Raw: The value of price is 	 10
+With Raw: The value of price is \t $price
+```
+
+## Type Conversion In Dart
 In dart, type conversion allows you to convert one data type to another type. For e.g. to convert String to int, int to String or String to bool, etc.
 
-Convert String To Int In Dart
+1. Convert String To Int In Dart
 You can convert String to int using int.parse() method. The method takes String as an argument and converts it into an integer.
 
+```
 void main() {
 String strvalue = "1";
 print("Type of strvalue is ${strvalue.runtimeType}");   
@@ -360,12 +379,19 @@ print("Value of intvalue is $intvalue");
 // this will print data type
 print("Type of intvalue is ${intvalue.runtimeType}");
 }
-targets
+```
 
- Show Output
-Convert String To Double In Dart
+**Output**
+```
+Type of strvalue is String
+Value of intvalue is 1
+Type of intvalue is int
+```
+
+2. Convert String To Double In Dart
 You can convert String to double using double.parse() method. The method takes String as an argument and converts it into a double.
 
+```
 void main() {
 String strvalue = "1.1";
 print("Type of strvalue is ${strvalue.runtimeType}");
@@ -374,9 +400,17 @@ print("Value of doublevalue is $doublevalue");
 // this will print data type
 print("Type of doublevalue is ${doublevalue.runtimeType}");
 }
-targets
+```
 
- Show Output
+**Output**
+
+```
+Type of strvalue is String
+Value of doublevalue is 1.1
+Type of doublevalue is double
+```
+
+
 Convert Int To String In Dart
 You can convert int to String using the toString() method. Here is example:
 
