@@ -537,10 +537,12 @@ print(myDetails['name']);
 
 **Output**
 
+`John Doe`
 
-Var Keyword In Dart
+## Var Keyword In Dart
 In Dart, var automatically finds a data type. In simple terms, var says if you don’t want to specify a data type, I will find a data type for you.
 
+```
 void main(){
 
 var name = "John Doe"; // String
@@ -549,55 +551,82 @@ var age = 20; // int
 print(name);
 print(age);
 }
-targets
+```
 
- Show Output
-Runes In Dart
+**Output**
+
+```
+John Doe
+20
+```
+
+6. Runes In Dart
 With runes, you can find Unicode values of String. The Unicode value of a is 97, so runes give 97 as output.
 
+```
 void main() {
 
 String value = "a";
 print(value.runes);
 }
-targets
+```
 
- Show Output
-How To Check Runtime Type
+**Output**
+
+`(97)`
+
+## How To Check Runtime Type
 You can check runtime type in dart with .runtimeType after the variable name.
 
+```
 void main() { 
    var a = 10;
    print(a.runtimeType); 
    print(a is int); // true
 }
-targets
+```
 
- Show Output
-Optionally Typed Language
+**Output**
+
+```
+int
+true
+```
+
+## Optionally Typed Language
 You may have heard of the statically-typed language. It means the data type of variables is known at compile time. Similarly, dynamically-typed language means data types of variables are known at run time. Dart supports dynamic and static types, so it is called optionally-typed language.
 
-Statically Typed
+## Statically Typed
 A language is statically typed if the data type of variables is known at compile time. Its main advantage is that the compiler can quickly check the issues and detect bugs.
 
+```
 void main() { 
    var myVariable = 50; // You can also use int instead of var
    myVariable = "Hello"; // this will give error
    print(myVariable);
 }
-targets
+```
 
- Show Output
-Dynamically Typed Example
+**Output**
+
+```
+Error:
+A value of type 'String' can't be assigned to a variable of type 'int'.
+```
+
+## Dynamically Typed Example
 A language is dynamically typed if the data type of variables is known at run time.
 
+```
 void main() { 
    dynamic myVariable = 50;
    myVariable = "Hello";
    print(myVariable);
 }
-targets
+```
 
- Show Output
- Info
+**Output**
+
+`Hello`
+
 Note: Using static type helps you to prevent writing silly mistakes in code. It’s a good habit to use static type in dart.
