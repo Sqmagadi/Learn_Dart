@@ -212,10 +212,12 @@ In Dart language, there is the type of values that can be represented and manipu
 | 7. | Runes |	runes |	It represents Unicode values of String |
 | 8. | Null |	null | It represents null value |
 
-Numbers
 
-When you need to store numeric value on dart, you can use either int or double. Both int and double are subtypes of num. You can use num to store both int or double value.
+## 1. Numbers
 
+When you need to store numeric value on dart, you can use either `int` or `double`. Both `int` and `double` are subtypes of `num`. You can use `num` to store both `int` or `double` value.
+
+```
 void main() {
 // Declaring Variables  
 int num1 = 100; // without decimal point.
@@ -233,10 +235,20 @@ print("Num 3 is $num3");
 print("Num 4 is $num4");  
 print("Sum is $sum");  
    
-}
-targets
+} 
+```
 
- Show Output
+**Output**
+
+```
+Num 1 is 100
+Num 2 is 130.2
+Num 3 is 50
+Num 4 is 50.4
+Sum is 330.59999999999997
+```
+
+
 Round Double Value To 2 Decimal Places
 The .toStringAsFixed(2) is used to round the double value upto 2 decimal places in dart. You can round to any decimal places by entering numbers like 2, 3, 4, etc.
 
@@ -245,12 +257,15 @@ void main() {
 double price = 1130.2232323233233; // valid.
 print(price.toStringAsFixed(2));
 }
-targets
 
- Show Output
-String
-String helps you to store text data. You can store values like I love dart, New York 2140 in String. You can use single or double quotes to store string in dart.
+**Output**
 
+`1130.22` 
+
+## 2. String
+String helps you to store `text` data. You can store values like `I love dart`, `New York 2140` in String. You can use single or double quotes to store string in dart.
+
+```
 void main() {
 // Declaring Values     
 String schoolName = "Diamond School";
@@ -259,12 +274,16 @@ String address = "New York 2140";
 // Printing Values
 print("School name is $schoolName and address is $address");   
 }
-targets
+```
 
- Show Output
-Create A Multi-Line String In Dart
-If you want to create a multi-line String in dart, then you can use triple quotes with either single or double quotation marks.
+**Output**
 
+`School name is Diamond School and address is New York 2140`
+
+#### Create A Multi-Line String In Dart
+If you want to create a multi-line String in dart, then you can use `triple quotes` with either single or double quotation marks.
+
+```
 void main() {
 // Multi Line Using Single Quotes   
 String multiLineText = '''
@@ -283,11 +302,22 @@ I am also writing here.
 // Printing Information   
 print("Multiline text is $multiLineText");
 print("Other multiline text is $otherMultiLineText");
-}
-targets
+} 
+```
 
- Show Output
-Special Character In String
+**Output**
+
+```
+Multiline text is This is Multi Line Text
+with 3 single quote
+I am also writing here.
+
+Other multiline text is This is Multi Line Text
+with 3 double quote
+I am also writing here.
+```
+
+#### Special Character In String
 Special Character	Work
 \n	New Line
 \t	Tab
