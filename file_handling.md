@@ -176,3 +176,51 @@ Mark,0123456789
 Elon,0122112322
  Info
 Note: You can create any type of file using writeAsStringSync() method. For example, .html, .json, .xml, etc.
+
+Delete File In Dart
+Assume that you have a file named test.txt in the same directory of your dart program. Now, let’s delete it.
+
+// dart program to delete file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.txt');
+  // delete file
+  file.deleteSync();
+  print('File deleted.');
+}
+ Show Output
+ Info
+Note: If you try to delete a file that does not exist, then it will throw an exception.
+
+Delete File If Exists
+
+You can use File.existsSync() method to check if a file exists or not. If it exists, then you can delete it.
+
+// dart program to delete file if exists
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.txt');
+  // check if file exists
+  if (file.existsSync()) {
+    // delete file
+    file.deleteSync();
+    print('File deleted.');
+  } else {
+    print('File does not exist.');
+  }
+}
+ Show Output
+
+
+Dart File Handling Practice Questions
+Write a dart program to add your name to “hello.txt” file.
+Write a dart program to append your friends name to a file that already has your name.
+Write a dart program to get the current working directory.
+Write a dart program to copy the “hello.txt” file to “hello_copy.txt” file.
+Write a dart program to create 100 files using loop.
+Write a dart program to delete the file “hello_copy.txt”. Make sure you have created the file “hello_copy.txt.
+Write a dart program to store name, age, and address of students in a csv file and read it.
