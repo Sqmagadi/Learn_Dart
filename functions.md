@@ -491,3 +491,152 @@ void main() {
 }
  Show Output
 
+Scope In Dart
+The scope is a concept that refers to where values can be accessed or referenced. Dart uses curly braces {} to determine the scope of variables. If you define a variable inside curly braces, you can’t use it outside the curly braces.
+
+Method Scope
+If you created variables inside the method, you can use them inside the method block but not outside the method block.
+
+Example 1: Method Scope
+void main() {
+  String text = "I am text inside main. Anyone can't access me.";
+  print(text);
+}
+ Show Output
+In this program, text is a String type where you can access and print method only inside the main function but not outside the main function.
+
+
+Global Scope
+You can define a variable in the global scope to use the variable anywhere in your program.
+
+Example 1: Global Scope
+String global = "I am Global. Anyone can access me.";
+void main() {
+  print(global);
+}
+ Show Output
+In this program, the variable named global is a top-level variable; you can access it anywhere in the program.
+
+ Info
+Note: Define your variable as much as close Local as you can. It makes your code clean and prevents you from using or changing them where you shouldn’t.
+
+Lexical Scope
+
+Dart is lexically scoped language, which means you can find the scope of variables with the help of braces {}.
+
+
+Math In Dart
+Math helps you to perform mathematical calculations efficiently. With dart math, you can generate random number, find square root, find power of number, or round specific numbers. To use math in dart, you must import 'dart:math';.
+
+How To Generate Random Numbers In Dart
+This example shows how to generate random numbers from 0 - 9 and also 1 to 10. After watching this example, you can generate a random number between your choices.
+
+import 'dart:math';
+void main()
+{
+Random random = new Random();
+int randomNumber = random.nextInt(10); // from 0 to 9 included
+print("Generated Random Number Between 0 to 9: $randomNumber");
+  
+int randomNumber2 = random.nextInt(10)+1; // from 1 to 10 included  
+print("Generated Random Number Between 1 to 10: $randomNumber2"); 
+}
+In this program, random.nextInt(10) function is used to generate a random number between 0 and 9 in which the value is stored in a variable randomNumber.
+
+The random.nextInt(10)+1 function is used to generate random number between 1 to 10 in which the value is stored in a variable randomNumber2.
+
+Generate Random Number Between Any Number
+
+Use this formula to generate a random number between any numbers in the dart.
+
+ min + Random().nextInt((max + 1) - min);
+Example: Random Number In Dart Between 10 - 20
+This program generates random numbers between 10 to 20.
+
+import 'dart:math';
+void main()
+{
+
+int min = 10;
+int max = 20; 
+
+int randomnum = min + Random().nextInt((max + 1) - min);
+  
+print("Generated Random number between $min and $max is: $randomnum");  
+}
+ Show Output
+Random Boolean And Double Value
+
+Here you will learn how to generate random boolean and double values in dart.
+
+  Random().nextBool(); // return true or false
+  Random().nextDouble(); // return 0.0 to 1.0
+Example 1: Generate Random Boolean And Double Values
+This example below generate random and boolean value.
+
+import 'dart:math';
+void main()
+{
+double randomDouble = Random().nextDouble();
+bool randomBool = Random().nextBool();
+  
+print("Generated Random double value is: $randomDouble");  
+print("Generated Random bool value is: $randomBool");  
+}
+Example 2: Generate a List Of Random Numbers In Dart
+This example will generate a list of 10 random numbers between 1 to 100.
+
+import 'dart:math';
+void main()
+{
+List<int> randomList = List.generate(10, (_) => Random().nextInt(100)+1); 
+print(randomList);  
+}
+Useful Math Function In Dart
+You can use some useful math functions to perform your daily task with dart programming.
+
+Function Name	Output	Description
+pow(10,2)	100	10 to the power 2 is 10*10
+max(10,2)	10	Maximum number is 10
+min(10,2)	2	Minimum number is 2
+sqrt(25)	5	Square root of 25 is 5
+Example: Math In Dart
+This example below finds the power of a number, a minimum and maximum value between two numbers, and the square root of a number.
+
+import 'dart:math';
+void main()
+{
+  int num1 = 10;
+  int num2 = 2;
+
+  num powernum = pow(num1,num2);
+  num maxnum = max(num1,num2);
+  num minnum = min(num1,num2);
+  num squareroot = sqrt(25); // Square root of 25
+  
+  print("Power is $powernum"); 
+  print("Maximum is $maxnum"); 
+  print("Minimum is $minnum"); 
+  print("Square root is $squareroot"); 
+  
+}
+ Show Output
+In this program, pow(num1, num2) is a function where num1 is a digit and num2 is a power.
+max(num1,num2) is a function which give the maximum number between num1 and num2.
+min(num1,num2) is a function which give the mininum number between num1 and num2.
+sqrt(25) is a function that gives the square root of 25.
+
+
+Question For Practice 3
+Write a program in Dart to print your own name using function.
+Write a program in Dart to print even numbers between intervals using function.
+Create a function called greet that takes a name as an argument and prints a greeting message. For example, greet(“John”) should print “Hello, John”.
+Write a program in Dart that generates random password.
+Write a program in Dart that find the area of a circle using function. Formula: pi * r * r
+Write a program in Dart to reverse a String using function.
+Write a program in Dart to calculate power of a certain number. For e.g 5^3=125
+Write a function in Dart named add that takes two numbers as arguments and returns their sum.
+Write a function in Dart called maxNumber that takes three numbers as arguments and returns the largest number.
+Write a function in Dart called isEven that takes a number as an argument and returns True if the number is even, and False otherwise.
+Write a function in Dart called createUser with parameters name, age, and isActive, where isActive has a default value of true.
+Write a function in Dart called calculateArea that calculates the area of a rectangle. It should take length and width as arguments, with a default value of 1 for both. Formula: length * width.
