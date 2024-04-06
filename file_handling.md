@@ -1,0 +1,178 @@
+Introduction To File Handling
+File handling is an important part of any programming language. In this section, you will learn how to read the file in a dart programming language.
+
+Read File In Dart
+Assume that you have a file named test.txt in the same directory of your dart program.
+
+Welcome to test.txt file.
+This is a test file.
+Now, you can read this file using File class and readAsStringSync() method.
+
+// dart program to read from file
+import 'dart:io';
+
+void main() {
+  // creating file object
+  File file = File('test.txt');
+  // read file
+  String contents = file.readAsStringSync();
+  // print file
+  print(contents);
+}
+ Show Output
+Get File Information
+
+In this example below, you will learn how to get file information like file location, file size, and last modified time.
+
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.txt');
+  // get file location
+  print('File path: ${file.path}');
+  // get absolute path
+  print('File absolute path: ${file.absolute.path}');
+  // get file size
+  print('File size: ${file.lengthSync()} bytes');
+  // get last modified time
+  print('Last modified: ${file.lastModifiedSync()}');
+}
+ Show Output
+ Info
+Note: If you try to get information of a file that does not exist, then it will throw an exception.
+
+CSV File
+
+A CSV (Comma Separated Values) file is a plain text file that contains data organized in a table format, where columns are separated by commas and rows are separated by line breaks. CSV files are used for:
+
+Data exchange between different applications.
+Data backup and restore.
+Importing and exporting data from databases.
+Automation of data processing tasks.
+Read CSV File In Dart
+Assume that you have a CSV file named test.csv in the same directory of your dart program.
+
+Name,Email,Phone
+John, john@gmail.com, 1234567890
+Smith, smith@gmail.com, 0987654321
+Now, you can read this file using File class and readAsStringSync() method. We will use split() method to split the string into a list of strings.
+
+// dart program to read from csv file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.csv');
+  // read file
+  String contents = file.readAsStringSync();
+  // split file using new line
+  List<String> lines = contents.split('\n');
+  // print file
+  print('---------------------');
+  for (var line in lines) {
+    print(line);
+  }
+}
+ Show Output
+Read Only Part Of File
+You can read only part of file using substring() method. Here is an example to read only first 10 characters of file. Make sure that you have a file named test.txt in the same directory of your dart program.
+
+Welcome to test.txt file
+This is a test file.
+// dart program to read from file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = new File('test.txt');
+  // read only first 10 characters
+  String contents = file.readAsStringSync().substring(0, 10);
+  // print file
+  print(contents);
+}
+ Show Output
+Read File From Specific Directory
+To read a file from a specific directory, you need to provide the full path of the file. Here is an example to read file from a specific directory.
+
+// dart program to read from file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('C:\\Users\\test.txt');
+  // read file
+  String contents = file.readAsStringSync();
+  // print file
+  print(contents);
+}
+ Show Output
+
+
+Write File In Dart
+Let’s create a file named test.txt in the same directory of your dart program and write some text in it.
+
+// dart program to write to file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.txt');
+  // write to file
+  file.writeAsStringSync('Welcome to test.txt file.');
+  print('File written.');
+}
+ Show Output
+ Info
+Note: If you have already some content in test.txt file, then it will be removed and replaced with new content.
+
+Add New Content To Previous Content
+
+You can use FileMode.append to add new content to previous content. Assume that test.txt file already contains some text.
+
+Welcome to test.txt file.
+Now, let’s add new content to it.
+
+// dart program to write to existing file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file =  File('test.txt');
+  // write to file
+  file.writeAsStringSync('\nThis is a new content.', mode: FileMode.append);
+  print('Congratulations!! New content is added on top of previous content.');
+}
+ Show Output
+Write CSV File In Dart
+
+In the example below, we will ask user to enter name and phone of 3 students and write it to a csv file named students.csv.
+
+// dart program to write to csv file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File("students.csv");
+  // write to file
+  file.writeAsStringSync('Name,Phone\n');
+  for (int i = 0; i < 3; i++) {
+    // user input name
+    stdout.write("Enter name of student ${i + 1}: ");
+    String? name = stdin.readLineSync();
+    stdout.write("Enter phone of student ${i + 1}: ");
+    // user input phone
+    String? phone = stdin.readLineSync();
+    file.writeAsStringSync('$name,$phone\n', mode: FileMode.append);
+  }
+  print("Congratulations!! CSV file written successfully.");
+}
+ Show Output
+students.csv file will look like this:
+
+Name,Phone
+John,1234567890
+Mark,0123456789
+Elon,0122112322
+ Info
+Note: You can create any type of file using writeAsStringSync() method. For example, .html, .json, .xml, etc.
