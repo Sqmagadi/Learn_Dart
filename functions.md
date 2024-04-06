@@ -387,3 +387,107 @@ void main() {
   printInfo("Kavya", "Female", "Ms.");
 }
  Show Output
+
+
+Anonymous Function In Dart
+This tutorial will teach you the anonymous function and how to use it. You already saw function like main(), add(), etc. These are the named functions, which means they have a certain name.
+
+But not every function needs a name. If you remove the return type and the function name, the function is called anonymous function.
+
+Syntax
+Here is the syntax of the anonymous function.
+
+(parameterList){
+// statements
+}
+Example 1: Anonymous Function In Dart
+
+In this example, you will learn to use an anonymous function to print all list items. This function invokes each fruit without having a function name.
+
+void main() {
+  const fruits = ["Apple", "Mango", "Banana", "Orange"];
+
+  fruits.forEach((fruit) {
+    print(fruit);
+  });
+}
+ Show Output
+Example 2: Anonymous Function In Dart
+In this example, you will learn to find the cube of a number using an anonymous function.
+
+void main() {
+// Anonymous function
+  var cube = (int number) {
+    return number * number * number;
+  };
+
+  print("The cube of 2 is ${cube(2)}");
+  print("The cube of 3 is ${cube(3)}");
+}
+ Show Output
+
+Arrow Function In Dart
+Dart has a special syntax for the function body, which is only one line. The arrow function is represented by => symbol. It is a shorthand syntax for any function that has only one expression.
+
+Syntax
+The syntax for the dart arrow function.
+
+returnType functionName(parameters...) => expression;
+ Info
+Note: The arrow function is used to make your code short.=> expr syntax is a shorthand for { return expr; }.
+
+Example 1: Simple Interest Without Arrow Function
+
+This program finds simple interest without using the arrow function.
+
+// function that calculate interest
+double calculateInterest(double principal, double rate, double time) {
+  double interest = principal * rate * time / 100;
+  return interest;
+}
+
+void main() {
+  double principal = 5000;
+  double time = 3;
+  double rate = 3;
+
+  double result = calculateInterest(principal, rate, time);
+  print("The simple interest is $result.");
+}
+ Show Output
+Example 2: Simple Interest With Arrow Function
+
+This program finds simple interest using the arrow function.
+
+// arrow function that calculate interest
+double calculateInterest(double principal, double rate, double time) =>
+    principal * rate * time / 100;
+
+void main() {
+  double principal = 5000;
+  double time = 3;
+  double rate = 3;
+
+  double result = calculateInterest(principal, rate, time);
+  print("The simple interest is $result.");
+}
+ Show Output
+Example 3: Simple Calculation Using Arrow Function
+This program finds the sum, difference, multiplication, and division of two numbers using the arrow function.
+
+int add(int n1, int n2) => n1 + n2;
+int sub(int n1, int n2) => n1 - n2;
+int mul(int n1, int n2) => n1 * n2;
+double div(int n1, int n2) => n1 / n2;
+
+void main() {
+  int num1 = 100;
+  int num2 = 30;
+
+  print("The sum is ${add(num1, num2)}");
+  print("The diff is ${sub(num1, num2)}");
+  print("The mul is ${mul(num1, num2)}");
+  print("The div is ${div(num1, num2)}");
+}
+ Show Output
+
