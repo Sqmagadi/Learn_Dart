@@ -1,0 +1,754 @@
+List In Dart
+If you want to store multiple values in the same variable, you can use List. List in dart is similar to Arrays in other programming languages. E.g. to store the names of multiple students, you can use a List. The List is represented by Square Braces[].
+
+How To Create List
+You can create a List by specifying the initial elements in a square bracket. Square bracket [] is used to represent a List.
+
+// Integer List
+List<int> ages = [10, 30, 23];
+
+// String List
+List<String> names = ["Raj", "John", "Rocky"];
+
+// Mixed List
+var mixed = [10, "John", 18.8];
+targets
+
+Types Of Lists
+Fixed Length List
+Growable List [Mostly Used]
+Fixed Length List
+
+The fixed-length Lists are defined with the specified length. You cannot change the size at runtime. This will create List of 5 integers with the value 0.
+
+void main() {  
+   var list = List<int>.filled(5,0);  
+   print(list);  
+}
+targets
+
+ Show Output
+ Info
+Note: You cannot add a new item to Fixed Length List, but you can change the values of List.
+
+Growable List
+
+A List defined without a specified length is called Growable List. The length of the growable List can be changed in runtime.
+
+void main() {  
+   var list1 = [210,21,22,33,44,55];  
+   print(list1);  
+}  
+targets
+
+ Show Output
+Access Item Of List
+You can access the List item by index. Remember that the List index always starts with 0.
+
+void main() {
+  var list = [210, 21, 22, 33, 44, 55];
+
+  print(list[0]);
+  print(list[1]);
+  print(list[2]);
+  print(list[3]);
+  print(list[4]);
+  print(list[5]);
+}
+targets
+
+ Show Output
+Get Index By Value
+You can also get the index by value.
+
+void main() {
+  var list = [210, 21, 22, 33, 44, 55];
+
+  print(list.indexOf(22));
+  print(list.indexOf(33));
+}
+targets
+
+ Show Output
+Find The Length Of The List
+You can find the length of List by using .length property.
+
+void main(){  
+   List<String> names = ["Raj", "John", "Rocky"];
+   print(names.length);
+ }
+targets
+
+ Show Output
+ Info
+Note: Remember that List index starts with 0 and length always starts with 1.
+
+Changing Values Of List
+You can also change the value of List. You can do it by listName[index]=value;. For more, see the example below.
+
+void main(){  
+   List<String> names = ["Raj", "John", "Rocky"];
+   names[1] = "Bill";
+   names[2] = "Elon";
+   print(names);
+}
+targets
+
+ Show Output
+Mutable And Immutable List
+A mutable List means they can change after the declaration, and an immutable List means they can’t change after the declaration.
+
+List<String> names = ["Raj", "John", "Rocky"]; // Mutable List
+names[1] = "Bill"; // possible
+names[2] = "Elon"; // possible
+    
+const List<String> names = ["Raj", "John", "Rocky"]; // Immutable List
+names[1] = "Bill"; // not possible
+names[2] = "Elon"; // not possible
+targets
+
+List Properties In Dart
+first: It returns the first element in the List.
+last: It returns the last element in the List.
+isEmpty: It returns true if the List is empty and false if the List is not empty.
+isNotEmpty: It returns true if the List is not empty and false if the List is empty.
+length: It returns the length of the List.
+reversed: It returns a List in reverse order.
+single: It is used to check if the List has only one element and returns it.
+Access First And Last Elements Of List
+You can access the first and last elements in the List by:
+
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   print("First element of the List is: ${drinks.first}");
+   print("Last element of the List is: ${drinks.last}");
+}  
+targets
+
+ Show Output
+Check The List Is Empty Or Not
+You can also check List contain any elements inside it or not. It will give result either in true or in false.
+
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   List<int>  ages = [];
+   print("Is drinks Empty: "+drinks.isEmpty.toString());
+   print("Is drinks not Empty: "+drinks.isNotEmpty.toString());
+   print("Is ages Empty: "+ages.isEmpty.toString());
+   print("Is ages not Empty: "+ages.isNotEmpty.toString());
+   
+}  
+targets
+
+ Show Output
+Reverse List In Dart
+You can easily reverse List by using .reversed properties. Here is an example below:
+
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   print("List in reverse: ${drinks.reversed}");
+}  
+targets
+
+ Show Output
+Adding Item To List
+Dart provides four methods to insert the elements into the Lists. These methods are given below.
+
+Method	Description
+add()	Add one element at a time and returns the modified List object.
+addAll()	Insert the multiple values to the given List, and each value is separated by the commas and enclosed with a square bracket ([]).
+insert()	Provides the facility to insert an element at a specified index position.
+insertAll()	Insert the multiple value at the specified index position.
+Example 1: Add Item To List
+In this example below, we are adding an item to evenList using add() method.
+
+void main() {  
+    var evenList = [2,4,6,8,10];  
+    print(evenList);  
+    evenList.add(12);  
+    print(evenList);  
+}  
+targets
+
+ Show Output
+Example 2: Add Items To List
+In this example below, we are adding items to evenList using addAll() method.
+
+void main() {
+  var evenList = [2, 4, 6, 8, 10];
+  print(evenList);
+  evenList.addAll([12, 14, 16, 18]);
+  print(evenList);
+}
+targets
+
+ Show Output
+Example 3: Insert Item To List
+In this example below, we are adding an item to myList using insert() method.
+
+void main() {
+  List myList = [3, 4, 2, 5];
+  print(myList);
+  myList.insert(2, 15);
+  print(myList);
+}
+targets
+
+ Show Output
+**Example 4: Insert Items To List **
+In this example below, we are adding items to myList using insertAll() method.
+
+void main() {
+  var myList = [3, 4, 2, 5];
+  print(myList);
+  myList.insertAll(1, [6, 7, 10, 9]);
+  print(myList);
+}
+  
+targets
+
+ Show Output
+Replace Range Of List
+You can also replace the range of the List. For more, see the example below.
+
+void main() {
+  var list = [10, 15, 20, 25, 30];
+  print("List before updation: ${list}");
+  list.replaceRange(0, 4, [5, 6, 7, 8]);
+  print("List after updation using replaceAll() function : ${list}");
+}
+targets
+
+ Show Output
+Removing List Elements
+Method	Description
+remove()	Removes one element at a time from the given List.
+removeAt()	Removes an element from the specified index position and returns it.
+removeLast()	Remove the last element from the given List.
+removeRange()	Removes the item within the specified range.
+Example 1: Removing List Item From List
+In this example below, we are removing item of List using remove() method.
+
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element : ${list}");
+  list.remove(30);
+  print("List after removing element : ${list}");
+}
+targets
+
+ Show Output
+Example 2: Removing List Item From List
+In this example below, we are removing item of List using removeAt() method.
+
+void main() {
+  var list = [10, 11, 12, 13, 14];
+  print("List before removing element : ${list}");
+  list.removeAt(3);
+  print("List after removing element : ${list}");
+}
+targets
+
+ Show Output
+Example 3: Removing Last Item From List
+In this example below, we are removing last item of List using removeLast() method.
+
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element:${list}");
+  list.removeLast();
+  print("List after removing last element:${list}");
+}
+targets
+
+ Show Output
+Example 4: Removing List Range From List
+In this example below, we are removing the range of items of List using removeRange() method.
+
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element:${list}");
+  list.removeRange(0, 3);
+  print("List after removing range element:${list}");
+}
+targets
+
+ Show Output
+Loops In List
+You can use for loop, for each loop, or any other type of loop.
+
+void main() {
+  List<int> list = [10, 20, 30, 40, 50];
+  list.forEach((n) => print(n));
+}
+targets
+
+ Show Output
+Multiply All Value By 2 Of All List
+This example below multiply value of List item by 2.
+
+void main() {
+  List<int> list = [10, 20, 30, 40, 50];
+  var douledList = list.map((n) => n * 2);
+
+  print((douledList));
+}
+targets
+
+ Show Output
+Combine Two Or More List In Dart
+You can combine two or more Lists in dart by using spread syntax.
+
+void main() {
+  List<String> names = ["Raj", "John", "Rocky"];
+  List<String> names2 = ["Mike", "Subash", "Mark"];
+
+  List<String> allNames = [...names, ...names2];
+  print(allNames);
+}
+targets
+
+ Show Output
+Conditions In List
+You can also use conditions in List. Here sad = false so cart doesn’t contain Beer in it.
+
+void main() {
+  bool sad = false;
+  var cart = ['milk', 'ghee', if (sad) 'Beer'];
+  print(cart);
+}
+ 
+targets
+
+ Show Output
+Where In List Dart
+You can use where with List to filter specific items. Here in this example, even numbers are only filtered.
+
+void main(){
+List<int> numbers = [2,4,6,8,10,11,12,13,14];
+
+List<int> even = numbers.where((number)=> number.isEven).toList(); 
+print(even);
+}
+targets
+
+ Show Output
+ Info
+Note: Choose Lists if order matters. You can easily add items to the end. Searching can be slow when the List size is big.
+
+
+Set In Dart
+Set is a unique collection of items. You cannot store duplicate values in the Set. It is unordered, so it can be faster than lists while working with a large amount of data. Set is useful when you need to store unique values without considering the order of the input. E.g., fruits name, months name, days name, etc. It is represented by Curley Braces{}.
+
+ Info
+Note: The list allows you to add duplicate items, but the Set doesn’t allow it.
+
+Syntax
+Set <variable_type> variable_name = {};
+How To Create A Set In Dart
+
+You can create a Set in Dart using the Set type annotation. Here Set<String> means only text is allowed in the Set.
+
+void main(){
+  Set<String> fruits = {"Apple", "Orange", "Mango"};
+  print(fruits);
+}
+ Show Output
+Set Properties In Dart
+Properties	Work
+first	To get first value of Set.
+last	To get last value of Set.
+isEmpty	Return true or false.
+isNotEmpty	Return true or false.
+length	It returns the length of the Set.
+Example of Set Properties Dart
+
+This example finds the first and last element of the Set, checks whether it is empty or not, and finds its length.
+
+void main() {
+  // declaring fruits as Set
+  Set<String> fruits = {"Apple", "Orange", "Mango", "Banana"};
+
+  // using different properties of Set
+  print("First Value is ${fruits.first}");
+  print("Last Value is ${fruits.last}");
+  print("Is fruits empty? ${fruits.isEmpty}");
+  print("Is fruits not empty? ${fruits.isNotEmpty}");
+  print("The length of fruits is ${fruits.length}");
+}
+ Show Output
+Check The Available Value
+If you want to see whether the Set contains specific items or not, you can use the contains method, which returns true or false.
+
+void main(){
+  Set<String> fruits = {"Apple", "Orange", "Mango"};
+  print(fruits.contains("Mango"));
+  print(fruits.contains("Lemon"));
+}
+ Show Output
+Add & Remove Items In Set
+Like lists, you can add or remove items in a Set. To add items use add() method and to remove use remove() method.
+
+Method	Description
+add()	Add one element to Set.
+remove()	Removes one element from Set.
+void main(){
+ Set<String> fruits = {"Apple", "Orange", "Mango"};
+  
+  fruits.add("Lemon");
+  fruits.add("Grape");
+  
+  print("After Adding Lemon and Grape: $fruits");
+  
+  fruits.remove("Apple");
+  print("After Removing Apple: $fruits");
+}
+ Show Output
+Adding Multiple Elements
+You can use addAll() method to add multiple elements from the list to Set.
+
+Method	Description
+addAll()	Insert the multiple values to the given Set.
+void main(){
+ Set<int> numbers = {10, 20, 30};
+  numbers.addAll([40,50]);
+ print("After adding 40 and 50: $numbers");
+}    
+ Show Output
+Printing All Values In Set
+You can print all Set items by using loops. Click here if you want to learn loop in dart.
+
+void main(){
+ Set<String> fruits = {"Apple", "Orange", "Mango"};
+  
+ for(String fruit in fruits){
+   print(fruit);
+ }
+}
+ Show Output
+Set Methods In Dart
+Some other helpful Set methods in dart.
+
+Method	Description
+clear()	Removes all elements from the Set.
+difference()	Creates a new Set with the elements of this that are not in other.
+elementAt()	Returns the index value of element.
+intersection()	Find common elements in two sets.
+Clear Set In Dart
+In this example, you can see how to remove all items from the Set in dart.
+
+void main() {
+  Set<String> fruits = {"Apple", "Orange", "Mango"};
+  // to clear all items
+  fruits.clear();
+
+  print(fruits);
+}
+ Show Output
+Difference In Set
+In Dart, the difference method creates a new Set with the elements that are not in the other.
+
+void main() {
+  Set<String> fruits1 = {"Apple", "Orange", "Mango"};
+  Set<String> fruits2 = {"Apple", "Grapes", "Banana"};
+
+  final differenceSet = fruits1.difference(fruits2);
+
+  print(differenceSet);
+}
+ Show Output
+Element At Method In Dart
+In Dart you can find the Set value by its index number. The index number starts with 0.
+
+void main() {
+  Set<String> days = {"Sunday", "Monday", "Tuesday"};
+  // index starts from 0 so 2 means Tuesday
+  print(days.elementAt(2));
+}
+ Show Output
+Intersection Method In Dart
+In Dart, the intersection method creates a new Set with the common elements in 2 Sets. Here Apple is available in both Sets.
+
+void main() {
+  Set<String> fruits1 = {"Apple", "Orange", "Mango"};
+  Set<String> fruits2 = {"Apple", "Grapes", "Banana"};
+
+  final intersectionSet = fruits1.intersection(fruits2);
+
+  print(intersectionSet);
+}
+ Show Output
+
+
+
+Map In Dart
+In a Map, data is stored as keys and values. In Map, each key must be unique. They are similar to HashMaps and Dictionaries in other languages.
+
+How To Create Map In Dart
+Here we are creating a Map for String and String. It means keys and values must be the type of String. You can create a Map of any kind as you like.
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  print(countryCapital);
+}
+ Show Output
+ Info
+Note: Here Usa, India, and China are keys, and it must be unique.
+
+Access Value From Key
+
+You can find the value of Map from its key. Here we are printing Washington, D.C. by its key, i.e., USA.
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  print(countryCapital["USA"]);
+}
+ Show Output
+Map Properties In Dart
+Properties	Work
+keys	To get all keys.
+values	To get all values.
+isEmpty	Return true or false.
+isNotEmpty	Return true or false.
+length	It returns the length of the Map.
+Example Of Map Properties In Dart
+
+This example finds all keys/values of Map, the first and last element, checks whether it is empty or not, and finds its length.
+
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  print("All keys of Map: ${expenses.keys}");
+  print("All values of Map: ${expenses.values}");
+  print("Is Map empty: ${expenses.isEmpty}");
+  print("Is Map not empty: ${expenses.isNotEmpty}");
+  print("Length of map is: ${expenses.length}");
+}
+ Show Output
+Adding Element To Map
+If you want to add an element to the existing Map. Here is the way for you:
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  // Adding New Item
+  countryCapital['Japan'] = 'Tokio';
+  print(countryCapital);
+}
+ Show Output
+Updating An Element Of Map
+If you want to update an element of the existing Map. Here is the way for you:
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Nothing',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  // Updating Item
+  countryCapital['USA'] = 'Washington, D.C.';
+  print(countryCapital);
+}
+ Show Output
+Map Methods In Dart
+Some useful Map methods in dart.
+
+Properties	Work
+keys.toList()	Convert all Maps keys to List.
+values.toList()	Convert all Maps values to List.
+containsKey(‘key’)	Return true or false.
+containsValue(‘value’)	Return true or false.
+clear()	Removes all elements from the Map.
+removeWhere()	Removes all elements from the Map if condition is valid.
+Convert Maps Keys & Values To List
+Let’s convert keys and values of Map to List.
+
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  // Without List
+  print("All keys of Map: ${expenses.keys}");
+  print("All values of Map: ${expenses.values}");
+ 
+  // With List
+  print("All keys of Map with List: ${expenses.keys.toList()}");
+  print("All values of Map with List: ${expenses.values.toList()}");
+  
+}
+ Show Output
+Check Map Contains Specific Key/Value Or Not?
+Let’s check whether the Map contains a specific key/value in it or not.
+
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  // For Keys
+  print("Does Map contain key sun: ${expenses.containsKey("sun")}");
+  print("Does Map contain key abc: ${expenses.containsKey("abc")}");
+ 
+  // For Values
+  print("Does Map contain value 3000.0: ${expenses.containsValue(3000.0)}");
+  print("Does Map contain value 100.0: ${expenses.containsValue(100.0)}");
+  
+}
+ Show Output
+Removing Items From Map
+Suppose you want to remove an element of the existing Map. Here is the way for you:
+
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Nothing',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  
+  countryCapital.remove("USA");
+  print(countryCapital);
+}
+ Show Output
+Looping Over Element Of Map
+You can use any loop in Map to print all keys/values or to perform operations in its keys and values.
+
+void main(){
+
+  Map<String, dynamic> book = {
+    'title': 'Misson Mangal',
+    'author': 'Kuber Singh',
+    'page': 233
+  };
+  
+ // Loop Through Map
+  for(MapEntry book in book.entries){
+    print('Key is ${book.key}, value ${book.value}');
+  }
+}
+ Show Output
+Looping In Map Using For Each
+In this example, you will see how to use a loop to print all the keys and values in Map.
+
+void main(){
+
+  Map<String, dynamic> book = {
+    'title': 'Misson Mangal',
+    'author': 'Kuber Singh',
+    'page': 233
+  };
+  
+  
+ // Loop Through For Each
+  book.forEach((key,value)=> print('Key is $key and value is $value'));
+  
+}
+ Show Output
+Remove Where In Dart Map
+In this example, you will see how to get students whose marks are greater or equal to 32 using where method.
+
+void main() {
+  Map<String, double> mathMarks = {
+    "ram": 30,
+    "mark": 32,
+    "harry": 88,
+    "raj": 69,
+    "john": 15,
+  };
+  mathMarks.removeWhere((key, value) => value < 32);
+  print(mathMarks);
+}
+ Show Output
+
+
+Where Dart
+You can use where in list, set, map to filter specific items. It returns a new list containing all the elements that satisfy the condition. This is also called Where Filter in dart. Let’s see the syntax below:
+
+Syntax
+Iterable<E> where(
+bool test(
+E element
+)
+)
+Example 1: Filter Only Odd Number From List
+
+In this example, you will get only odd numbers from a list.
+
+void main() {
+  List<int> numbers = [2, 4, 6, 8, 10, 11, 12, 13, 14];
+
+  List<int> oddNumbers = numbers.where((number) => number.isOdd).toList();
+  print(oddNumbers);
+}
+ Show Output
+Example 2: Filter Days Start With S
+In this example, you will get only days that start with alphabet s.
+
+void main() {
+  List<String> days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+
+  List<String> startWithS =
+      days.where((element) => element.startsWith("S")).toList();
+
+  print(startWithS);
+}
+ Show Output
+Example 3: Where Filter In Map
+
+In this example, you will get students whose marks are greater or equal to 32.
+
+void main() {
+  Map<String, double> mathMarks = {
+    "ram": 30,
+    "mark": 32,
+    "harry": 88,
+    "raj": 69,
+    "john": 15,
+  };
+
+  mathMarks.removeWhere((key, value) => value < 32);
+
+  print(mathMarks);
+}
+ Show Output
+
+
+ Question For Practice 4
+Create a list of names and print all names using list.
+Create a set of fruits and print all fruits using loop.
+Create a program thats reads list of expenses amount using user input and print total.
+Create an empty list of type string called days. Use the add method to add names of 7 days and print all days.
+Add your 7 friend names to the list. Use where to find a name that starts with alphabet a.
+Create a map with name, address, age, country keys and store values to it. Update country name to other country and print all keys and values.
+Create a map with name, phone keys and store some values to it. Use where to find all keys that have length 4.
+Create a simple to-do application that allows user to add, remove, and view their task.
