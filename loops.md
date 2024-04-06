@@ -1,0 +1,678 @@
+LOOPS IN DART
+Dart Loops
+In Programming, loops are used to repeat a block of code until certain conditions are not completed. For, e.g., if you want to print your name 100 times, then rather than typing print(“your name”); 100 times, you can use a loop.
+
+There are different types of loop in Dart. They are:
+
+For Loop
+For Each Loop
+While Loop
+Do While Loop
+ Info
+Note: The primary purpose of all loops is to repeat a block of code.
+
+Print Your Name 10 Times Without Using Loop
+
+Let’s first print the name 10 times without using a loop.
+
+void main() {
+    print("John Doe");
+    print("John Doe");
+    print("John Doe");
+    print("John Doe");
+    print("John Doe");
+    print("John Doe");
+    print("John Doe");
+    print("John Doe");
+    print("John Doe");
+    print("John Doe");
+}
+ Show Output
+Print Your Name 10 Times Using Loop
+We will learn for loop in the next section, paste the code and see the output. It will print your name 10 times.
+
+void main() {
+  for (int i = 0; i < 10; i++) {
+    print("John Doe");
+  }
+}
+ Show Output
+What if you want to print your name 1000 times? Without using a loop, it will be difficult for you.
+
+ Info
+Note: Loops are helpful because they reduce errors, save time, and make code more readable.
+
+What After This?
+
+Move to a new section to understand each loop clearly.
+
+
+
+FOR LOOP IN DART
+For Loop
+This is the most common type of loop. You can use for loop to run a code block multiple times according to the condition. The syntax of for loop is:
+
+for(initialization; condition; increment/decrement){
+            statements;
+}
+Initialization is executed (one time) before the execution of the code block.
+Condition defines the condition for executing the code block.
+Increment/Decrement is executed (every time) after the code block has been executed.
+Example 1: To Print 1 To 10 Using For Loop
+
+This example prints 1 to 10 using for loop. Here int i = 1; is initialization, i<=10 is condition and i++ is increment/decrement.
+
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+}
+ Show Output
+Example 2: To Print 10 To 1 Using For Loop
+This example prints 10 to 1 using for loop. Here int i = 10; is initialization, i>=1 is condition and i-- is increment/decrement.
+
+void main() {
+  for (int i = 10; i >= 1; i--) {
+    print(i);
+  }
+}
+ Show Output
+Example 3: Print Name 10 Times Using For Loop
+
+This example prints the name 10 times using for loop. Based on the condition, the body of the loop executes 10 times.
+
+void main() {
+  for (int i = 0; i < 10; i++) {
+    print("John Doe");
+  }
+}
+ Show Output
+Example 4: Display Sum of n Natural Numbers Using For Loop
+Here, the value of the total is 0 initially. Then, the for loop is iterated from i = 1 to 100. In each iteration, i is added to the total, and the value of i is increased by 1. Result is 1+2+3+….+99+100.
+
+void main(){
+
+  int total = 0;
+  int n = 100; // change as per required
+  
+  for(int i=1; i<=n; i++){
+    total = total + i;
+  }
+  
+  print("Total is $total");
+  
+}
+ Show Output
+Example 5: Display Even Numbers Between 50 to 100 Using For Loop
+This program will print even numbers between 50 to 100 using for loop.
+
+void main(){
+  for(int i=50; i<=100; i++){
+    if(i%2 == 0){
+      print(i);
+    }
+  } 
+}
+ Show Output
+Infinite Loop In Dart
+If the condition never becomes false in looping, it is called an infinite loop. It uses more resources on your computer. The task is done repeatedly until the memory runs out.
+
+This program prints 1 to infinite because the condition is i>=1, which is always true with i++.
+
+void main() {
+  for (int i = 1; i >= 1; i++) {
+    print(i);
+  }
+}
+ Info
+Note: Infinite loops take your computer resources continuously, use more power, and slow your computer. So always check your loop before use.
+
+
+FOR EACH LOOP IN DART
+For Each Loop
+The for each loop iterates over all list elements or variables. It is useful when you want to loop through list/collection. The syntax of for-each loop is:
+
+collection.forEach(void f(value));
+targets
+
+Example 1: Print Each Item Of List Using Foreach
+
+This will print each name of football players.
+
+void main(){
+  List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+  footballplayers.forEach( (names)=>print(names));
+}
+ Show Output
+Example 2: Print Each Total and Average Of Lists
+This program will print the total sum of all numbers and also the average value from the total.
+
+void main(){
+  List<int> numbers = [1,2,3,4,5];
+  
+  int total = 0;
+  
+   numbers.forEach( (num)=>total= total+ num);
+  
+  print("Total is $total.");
+  
+  double avg = total / (numbers.length);
+  
+  print("Average is $avg.");
+  
+}
+ Show Output
+For In Loop In Dart
+
+There is also another for loop, i.e., for in loop. It also makes looping over the list very easily.
+
+void main(){
+    List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+
+  for(String player in footballplayers){
+    print(player);
+  }
+}
+ Show Output
+How to Find Index Value Of List
+In dart, asMap method converts the list to a map where the keys are the index and values are the element at the index.
+
+void main(){
+
+List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+
+footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
+
+}
+ Show Output
+Example 3: Print Unicode Value of Each Character of String
+This will split the name into Unicode values and then find characters from the Unicode value.
+
+void main(){
+  
+String name = "John";
+     
+for(var codePoint in name.runes){
+  print("Unicode of ${String.fromCharCode(codePoint)} is $codePoint.");
+}
+}
+ Show Output
+
+
+
+WHILE LOOP IN DART
+While Loop
+In while loop, the loop’s body will run until and unless the condition is true. You must write conditions first before statements. This loop checks conditions on every iteration. If the condition is true, the code inside {} is executed, if the condition is false, then the loop stops.
+
+Syntax
+while(condition){  
+       //statement(s);  
+      // Increment (++) or Decrement (--) Operation;  
+}  
+A while loop evaluates the condition inside the parenthesis ().
+If the condition is true, the code inside {} is executed.
+The condition is re-checked until the condition is false.
+When the condition is false, the loop stops.
+Example 1: To Print 1 To 10 Using While Loop
+
+This program prints 1 to 10 using while loop.
+
+void main() {
+  int i = 1;
+  while (i <= 10) {
+    print(i);
+    i++;
+  }
+}
+ Show Output
+ Info
+Note: Do not forget to increase the variable used in the condition. Otherwise, the loop will never end and becomes an infinite loop.
+
+Example 2: To Print 10 To 1 Using While Loop
+
+This program prints 10 to 1 using while loop.
+
+void main() {
+  int i = 10;
+  while (i >= 1) {
+    print(i);
+    i--;
+  }
+}
+ Show Output
+Example 3: Display Sum of n Natural Numbers Using While Loop
+Here, the value of the total is 0 initially. Then, the while loop is iterated from i = 1 to 100. In each iteration, i is added to the total, and the value of i is increased by 1. Result is 1+2+3+….+99+100.
+
+void main(){
+
+  int total = 0;
+  int n = 100; // change as per required
+  int i =1;
+
+  while(i<=n){
+    total = total + i;
+    i++;
+  }
+  
+  print("Total is $total");
+  
+}
+ Show Output
+Example 4: Display Even Numbers Between 50 to 100 Using While Loop
+This program will print even numbers between 50 to 100 using while loop.
+
+void main(){
+  int i = 50;
+  while(i<=100){
+  if(i%2 == 0){
+      print(i);
+    }
+    i++;
+  }
+}
+ Show Output
+
+
+
+DO WHILE LOOP IN DART
+Do While Loop
+Do while loop is used to run a block of code multiple times. The loop’s body will be executed first, and then the condition is tested. The syntax of do while loop is:
+
+do{
+    statement1;
+    statement2;
+    .
+    .
+    .
+    statementN;
+}while(condition);
+First, it runs statements, and finally, the condition is checked.
+If the condition is true, the code inside {} is executed.
+The condition is re-checked until the condition is false.
+When the condition is false, the loop stops.
+ Info
+Note: In a do-while loop, the statements will be executed at least once time, even if the condition is false. It is because the statement is executed before checking the condition.
+
+Example 1: To Print 1 To 10 Using Do While Loop
+void main() {
+  int i = 1;
+  do {
+    print(i);
+    i++;
+  } while (i <= 10);
+}
+ Show Output
+Example 2: To Print 10 To 1 Using Do While Loop
+void main() {
+  int i = 10;
+  do {
+    print(i);
+    i--;
+  } while (i >= 1);
+}
+ Show Output
+Example 3: Display Sum of n Natural Numbers Using Do While Loop
+
+Here, the value of the total is 0 initially. Then, the do-while loop is iterated from i = 1 to 100. In each iteration, i is added to the total, and the value of i is increased by 1. Result is 1+2+3+….+99+100.
+
+void main(){
+
+  int total = 0;
+  int n = 100; // change as per required
+  int i =1;
+  
+  do{
+  total = total + i;
+    i++;
+  }while(i<=n);
+  
+  print("Total is $total");
+  
+}
+ Show Output
+When The Condition Is False
+
+Let’s make one condition false and see the demo below. Hello got printed if the condition is false.
+
+void main(){
+
+  int number = 0;
+  
+  do{
+  print("Hello");
+  number--;
+  }while(number >1);
+  
+}
+ Show Output
+
+
+
+BREAK AND CONTINUE IN DART
+Dart Break and Continue
+In this tutorial, you will learn about the break and continue in dart. While working on loops, we need to skip some elements or terminate the loop immediately without checking the condition. In such a situation, you can use the break and continue statement.
+
+Break Statement
+Sometimes you will need to break out of the loop immediately without checking the condition. You can do this using break statement.
+
+The break statement is used to exit a loop. It stops the loop immediately, and the program’s control moves outside the loop. Here is syntax of break:
+
+break;
+Example 1: Break In Dart For Loop
+
+Here, the loop condition is true until the value of i is less than or equal to 10. However, the break says to go outside the loop when the value of i becomes 5.
+
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+      break;
+    }
+    print(i);
+  }
+}
+ Show Output
+Example 2: Break In Dart Negative For Loop
+Here, the loop condition is true until the value of i is more than or equal to 1. However, the break says to go outside the loop when the value of i becomes 7.
+
+void main() {
+  for (int i = 10; i >= 1; i--) {
+    if (i == 7) {
+      break;
+    }
+    print(i);
+  }
+}
+ Show Output
+Example 3: Break In Dart While Loop
+
+Here, this while loop condition is true until the value of i is less than or equal to 10. However, the break says to go outside the loop when the value of i becomes 5.
+
+void main() {
+ int i =1;
+ while(i<=10){
+  print(i);
+   if (i == 5) {
+      break;
+    }
+    i++;
+ }
+}
+ Show Output
+Example 4: Break In Switch Case
+As we already learn in dart switch case, it is important to add break keyword in switch statement. This example prints the month name based on the number of the month using a switch case.
+
+void main() {
+  var noOfMoneth = 5;
+  switch (noOfMoneth) {
+    case 1:
+      print("Selected month is January.");
+      break;
+    case 2:
+      print("Selected month is February.");
+      break;
+    case 3:
+      print("Selected month is march.");
+      break;
+    case 4:
+      print("Selected month is April.");
+      break;
+    case 5:
+      print("Selected month is May.");
+      break;
+    case 6:
+      print("Selected month is June.");
+      break;
+    case 7:
+      print("Selected month is July.");
+      break;
+    case 8:
+      print("Selected month is August.");
+      break;
+    case 9:
+      print("Selected month is September.");
+      break;
+    case 10:
+      print("Selected month is October.");
+      break;
+    case 11:
+      print("Selected month is November.");
+      break;
+    case 12:
+      print("Selected month is December.");
+      break;
+    default:
+      print("Invalid month.");
+      break;
+  }
+}
+ Show Output
+Continue Statement
+Sometimes you will need to skip an iteration for a specific condition. You can do this utilizing continue statement.
+
+The continue statement skips the current iteration of a loop. It will bypass the statement of the loop. It does not terminate the loop but rather continues with the next iteration. Here is the syntax of continue statement:
+
+continue;
+Example 1: Continue In Dart
+Here, the loop condition is true until the value of i is less than or equal to 10. However, the continue says to go to the next iteration of the loop when the value of i becomes 5.
+
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+      continue;
+    }
+    print(i);
+  }
+}
+ Show Output
+Example 2: Continue In For Loop Dart
+Here, the loop condition is true until the value of i is more than or equal to 1. However, the continue says to go to the next iteration of the loop when the value of i becomes 4.
+
+void main() {
+  for (int i = 10; i >= 1; i--) {
+    if (i == 4) {
+      continue;
+    }
+    print(i);
+  }
+}
+ Show Output
+Example 3: Continue In Dart While Loop
+Here, this while loop condition is true until the value of i is less than or equal to 10. However, the continue says to go to the next iteration of the loop when the value of i becomes 5.
+
+void main() {
+  int i = 1;
+  while (i <= 10) {
+    if (i == 5) {
+      i++;
+      continue;
+    }
+    print(i);
+    i++;
+  }
+}
+ Show Output
+
+
+
+EXCEPTION HANDLING IN DART
+Exception In Dart
+An exception is an error that occurs at runtime during program execution. When the exception occurs, the flow of the program is interrupted, and the program terminates abnormally. There is a high chance of crashing or terminating the program when an exception occurs. Therefore, to save your program from crashing, you need to catch the exception.
+
+ Info
+Note: If you are attempting a task that might result in an error, it’s a good habit to use the try-catch statement.
+
+Syntax
+try {
+// Your Code Here
+  }
+catch(ex){
+// Exception here
+}
+Try & Catch In Dart
+
+Try You can write the logical code that creates exceptions in the try block.
+
+Catch When you are uncertain about what kind of exception a program produces, then a catch block is used. It is written with a try block to catch the general exception.
+
+Example 1: Try Catch In Dart
+In this example, you will see how to handle the exception using the try-catch block.
+
+void main() {   
+   int a = 18;   
+   int b = 0;   
+   int res;    
+     
+   try {    
+      res = a ~/ b;
+      print("Result is $res");   
+   }    
+    // It returns the built-in exception related to the occurring exception  
+   catch(ex) {   
+      print(ex);   
+    }   
+}  
+ Show Output
+Finally In Dart Try Catch
+
+The finally block is always executed whether the exceptions occur or not. It is optional to include the final block, but if it is included, it should be after the try and catch block is over.
+
+On block is used when you know what types of exceptions are produced by the program.
+
+Syntax
+try {
+.....
+}
+on Exception1 {
+....
+}
+catch Exception2 {
+....
+}
+finally {
+// code that should always execute whether an exception or not.
+}
+Example 2: Finally In Dart Try Catch
+In this example, you will see how to handle the exception using the try-catch block with the finally block.
+
+void main() {
+  int a = 12;
+  int b = 0;
+  int res;
+  try {
+    res = a ~/ b;
+  } on UnsupportedError {
+    print('Cannot divide by zero');
+  } catch (ex) {
+    print(ex);
+  } finally {
+    print('Finally block always executed');
+  }
+}
+ Show Output
+Throwing An Exception
+The throw keyword is used to raise an exception explicitly. A raised exception should be handled to prevent the program from exiting unexpectedly.
+
+Syntax
+throw new Exception_name() 
+Example 3: Throwing An Exception
+In this example, you will see how to throw an exception using the throw keyword.
+
+void main() {
+  try {
+    check_account(-10);
+  } catch (e) {
+    print('The account cannot be negative');
+  }
+}
+
+void check_account(int amount) {
+  if (amount < 0) {
+    throw new FormatException(); // Raising explanation externally
+  }
+}
+ Show Output
+Why Is Exception Handling Needed?
+Exceptions provide the means to separate the details of what to do when something out of the ordinary happens from the main logic of a program. Therefore, exceptions must be handled to prevent the application from unexpected termination. Here are some reasons why exception handling is necessary:
+
+To avoid abnormal termination of the program.
+To avoid an exception caused by logical error.
+To avoid the program from falling apart when an exception occurs.
+To reduce the vulnerability of the program.
+To maintain a good user experience.
+To try providing aid and some debugging in case of an exception.
+How To Create Custom Exception In Dart
+As you go advance, you need to create your exception; Dart enables you to create your exception.
+
+Syntax
+class YourExceptionClass implements Exception{
+  // constructors, variables & methods
+}
+Example 4: How to Create & Handle Exception
+This program throws an exception when a student’s mark is negative. You will understand implements in the object-oriented programming section.
+
+class MarkException implements Exception {
+  String errorMessage() {
+    return 'Marks cannot be negative value.';
+  }
+}
+
+void main() {
+  try {
+    checkMarks(-20);
+  } catch (ex) {
+    print(ex.toString());
+  }
+}
+
+void checkMarks(int marks) {
+  if (marks < 0) throw MarkException().errorMessage();
+}
+ Show Output
+Example 5: How to Create & Handle Exception
+This program throws an exception when you find the square root of a negative number.
+
+import 'dart:math';
+
+// custom exception class
+class NegativeSquareRootException implements Exception {
+  @override
+  String toString() {
+    return 'Sqauare root of negative number is not allowed here.';
+  }
+}
+
+// get square root of a positive number
+num squareRoot(int i) {
+  if (i < 0) {
+    // throw `NegativeSquareRootException` exception
+    throw NegativeSquareRootException();
+  } else {
+    return sqrt(i);
+  }
+}
+
+void main() {
+  try {
+    var result = squareRoot(-4);
+
+    print("result: $result");
+  } on NegativeSquareRootException catch (e) {
+    print("Oops, Negative Number: $e");
+  } catch (e) {
+    print(e);
+  } finally {
+    print('Job Completed!');
+  }
+}
+ Show Output
+
+
+QUESTION FOR PRACTICE 2
+Question For Practice 2
+
+Write a dart program to print your name 100 times.
+Write a dart program to calculate the sum of natural numbers.
+Write a dart program to generate multiplication tables of 5.
+Write a dart program to generate multiplication tables of 1-9.
+Write a dart program to create a simple calculator that performs addition, subtraction, multiplication, and division.
+Write a dart program to print 1 to 100 but not 41.

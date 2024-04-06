@@ -1,0 +1,417 @@
+Conditions In Dart
+When you write a computer program, you need to be able to tell the computer what to do in different situations. With conditions, you can control the flow of the dart program. Suppose you need to execute a specific code when a particular situation is true. In that case, you can use conditions in Dart. E.g., a calculator app must perform subtraction if the user presses the subtract button and addition if the user taps the add button.
+
+Types Of Condition
+You can use following conditions to control the flow of your program.
+
+If Condition
+If-Else Condition
+If-Else-If Condition
+Switch case
+If Condition
+
+The easy and most common way of controlling the flow of a program is through the use of an if statement. If statement allow us to execute a code block when the given condition is true. Conditions evaluate boolean values.
+
+Syntax
+if(condition) {
+    Statement 1;
+    Statement 2;
+       .
+       .
+    Statement n;
+}
+Example Of If Condition
+It prints whether the person is a voter. If the person’s age is greater and equal to 18, it will print, You are a voter.
+
+void main()
+{
+    var age = 20;
+    
+    if(age >= 18){
+      print("You are voter.");
+    }
+}
+ Show Output
+If-Else Condition
+
+If the result of the condition is true, then the body of the if-condition is executed. Otherwise, the body of the else-condition is executed.
+
+Syntax
+if(condition){
+statements;
+}else{
+statements;
+}
+Example Of If-Else Condition
+Dart program prints whether the person is a voter or not based on age.
+
+void main(){
+        int age = 12;
+        if(age >= 18){
+            print("You are voter.");
+        }else{
+            print("You are not voter.");
+        }
+}
+ Show Output
+Condition Based On Boolean Value
+If the married status is false, it prints you are single; otherwise, it will print you are married.
+
+void main(){
+        bool isMarried = false;
+        if(isMarried){
+            print("You are married.");
+        }else{
+            print("You are single.");
+        }
+}
+ Show Output
+If-Else-If Condition
+When you have multiple if conditions, then you can use if-else-if. You can learn more in the example below. When you have more than two conditions, you can use if, else if, else in dart.
+
+Syntax
+if(condition1){
+statements1;
+}else if(condition2){
+statements2;
+}else if(condition3){
+statements3;
+}
+.
+.
+.
+else(conditionN){
+statementsN;
+}
+Example Of If-Else-If Condition
+This program prints the month name based on the numeric value of that month. You will get a different result if you change the number of month.
+
+void main() {
+  int noOfMonth = 5;
+
+  // Check the no of month
+  if (noOfMonth == 1) {
+    print("The month is jan");
+  } else if (noOfMonth == 2) {
+    print("The month is feb");
+  } else if (noOfMonth == 3) {
+    print("The month is march");
+  } else if (noOfMonth == 4) {
+    print("The month is april");
+  } else if (noOfMonth == 5) {
+    print("The month is may");
+  } else if (noOfMonth == 6) {
+    print("The month is june");
+  } else if (noOfMonth == 7) {
+    print("The month is july");
+  } else if (noOfMonth == 8) {
+    print("The month is aug");
+  } else if (noOfMonth == 9) {
+    print("The month is sep");
+  } else if (noOfMonth == 10) {
+    print("The month is oct");
+  } else if (noOfMonth == 11) {
+    print("The month is nov");
+  } else if (noOfMonth == 12) {
+    print("The month is dec");
+  } else {
+    print("Invalid option given.");
+  }
+}
+ Show Output
+Find Greatest Number Among 3 Numbers
+Dart program, which finds the greatest number among three numbers.
+
+void main(){
+        int num1 = 1200;
+        int num2 = 1000;
+        int num3 = 150;
+
+        if(num1 > num2  && num1 > num3){
+            print("Num 1 is greater: i.e $num1");
+        }
+        if(num2 > num1 && num2 > num3){
+           print("Num2 is greater: i.e $num2");
+        }
+        if(num3 > num1 && num3 > num2){
+            print("Num3 is greater: i.e $num3");
+        }
+}
+ Show Output
+
+
+
+ASSERT IN DART
+Assert
+While coding, it is hard to find errors in big projects, so dart provide a assert method to check for the error. It takes conditions as an argument. If the condition is true, nothing happens. If a condition is false, it will raise an error.targets
+
+Syntax
+You can use assert without a custom message or with a custom message.
+
+assert(condition);
+// or 
+assert(condition, "Your custom message");
+Example 1: How To Use Assert In Dart Program
+
+This example shows how you can use assert without a custom message.
+
+void main() { 
+   var age = 22;
+   assert(age!=22);
+}
+ Show Output
+Example 2: How To Use Assert In Dart Program
+This example shows how you can use assert with a custom message.
+
+void main() { 
+   var age = 22;
+   assert(age!=22, "Age must be 22");
+}
+ Show Output
+How to Run File In Assert Mode
+
+Use this command to run the dart file, which enables assert. If you don’t use this, you will not be able to see the issue. You can use this command below if you are running a dart file from the computer.
+
+dart --enable-asserts file_name.dart
+ Info
+Note: The assert(condition) method only runs in development mode. It will throw an exception only when the condition is false. If the condition is true, nothing happens. Production code ignores it.
+
+
+SWITCH CASE IN DART
+Switch Case In Dart
+targetsIn this tutorial, you will learn to use dart switch case to control your program’s flow. A Switch case is used to execute the code block based on the condition.
+
+switch(expression) {
+    case value1:
+        // statements
+        break;
+    case value2:
+        // statements
+        break;
+    case value3:
+        // statements
+        break;
+    default:
+       // default statements
+}
+targets
+
+How does switch-case statement work in dart
+
+The expression is evaluated once and compared with each case value.
+If expression matches with case value1, the statements of case value1 are executed. Similarly, case value 2 will be executed if the expression matches case value2. If the expression matches the case value3, the statements of case value3 are executed.
+The break keywords tell dart to exit the switch statement because the statements in the case block are finished.
+If there is no match, default statements are executed.
+ Info
+Note: You can use a Switch case as an alternative to the if-else-if condition.
+
+Replace If Else If With Switch In Dart
+
+Here you can see the same program using if else if and switch in dart.
+
+Example: Using If Else If
+This example prints the day name based on the numeric day of the week using a if else if.
+
+void main(){
+   var dayOfWeek = 5;
+if (dayOfWeek == 1) {
+        print("Day is Sunday.");
+  }
+else if (dayOfWeek == 2) {
+       print("Day is Monday.");
+     }
+else if (dayOfWeek == 3) {
+      print("Day is Tuesday.");
+     }
+else if (dayOfWeek == 4) {
+        print("Day is Wednesday.");
+     }
+else if (dayOfWeek == 5) {
+        print("Day is Thursday.");
+   }
+else if (dayOfWeek == 6) {
+        print("Day is Friday.");
+    }
+else if (dayOfWeek == 7) {
+        print("Day is Saturday.");
+}else{
+        print("Invalid Weekday.");
+     }
+}
+targets
+
+ Show Output
+Example Of Switch Statement
+
+This example prints the day name based on the numeric day of the week using a switch case.
+
+void main() {
+  var dayOfWeek = 5;
+  switch (dayOfWeek) {
+    case 1:
+        print("Day is Sunday.");
+        break;
+    case 2:
+        print("Day is Monday.");
+      break;
+    case 3:
+      print("Day is Tuesday.");
+      break;
+    case 4:
+        print("Day is Wednesday.");
+      break;
+    case 5:
+        print("Day is Thursday.");
+      break;
+    case 6:
+        print("Day is Friday.");
+      break;
+    case 7:
+        print("Day is Saturday.");
+      break;
+    default:
+        print("Invalid Weekday.");
+      break;
+  }
+}
+targets
+
+ Show Output
+ Info
+Note: The syntax of switch statements is cleaner and much easier to read and write.
+
+Switch Case On Strings
+You can also use a switch case with strings. This program prints information based on weather value.
+
+void main() {
+ const weather = "cloudy";
+
+  switch (weather) {
+    case "sunny":
+        print("Its a sunny day. Put sunscreen.");
+        break;
+    case "snowy":
+        print("Get your skis.");
+      break;
+    case "cloudy":
+    case "rainy": 
+      print("Please bring umbrella.");
+      break;
+    default:
+        print("Sorry I am not familiar with such weather.");
+      break;
+  }
+}
+targets
+
+ Show Output
+Switch Case On Enum
+An enum or enumeration is used for defining value according to you. You can define your own type with a finite number of options. Here is the syntax for defining enum.
+
+Syntax
+enum enum_name { 
+  constant_value1, 
+  constant_value2, 
+  constant_value3 
+  }
+targets
+
+Example of Switch Using Enum In Dart
+Enum plays well with switch statements. Let’s see an example using enum.
+
+// define enum outside main function
+enum Weather{ sunny, snowy, cloudy, rainy}
+// main method
+void main() {
+ const weather = Weather.cloudy;
+  
+  switch (weather) {
+    case Weather.sunny:
+        print("Its a sunny day. Put sunscreen.");
+        break;
+    case Weather.snowy:
+        print("Get your skis.");
+      break;
+    case Weather.rainy:
+    case Weather.cloudy:
+      print("Please bring umbrella.");
+      break;
+    default:
+        print("Sorry I am not familiar with such weather.");
+      break;
+  }
+}
+targets
+
+ Show Output
+
+
+
+
+TERNARY OPERATOR IN DART
+Ternary Operator
+The ternary operator is like if-else statement. This is a one-liner replacement for the if-else statement. It is used to write a conditional expression, where based on the result of a boolean condition, one of the two values is selected.targets
+
+Syntax
+condition ? exprIfTrue : exprIfFalse
+ Info
+Note: The ternary operator takes a condition and returns one of two values, depending upon the condition’s boolean value, i.e., true or false.
+
+Ternary Operator Vs If Else
+
+We already learned if-else in dart. Let us see the same example using the if-else and ternary operator.
+
+Example Using If Else
+This program finds greatest number between two numbers using if else.
+
+void main() {
+  int num1 = 10;
+  int num2 = 15;
+  int max = 0;
+  if(num1> num2){
+    max = num1;
+  }else {
+    max = num2;
+  }
+  print("The greatest number is $max");
+}
+ Show Output
+Example 1: Using Ternary Operator
+
+This program finds greatest number between two numbers using ternary operator.
+
+void main() {
+  int num1 = 10;
+  int num2 = 15;
+  int max = (num1 > num2) ? num1 : num2;
+  print("The greatest number is $max");
+}
+ Show Output
+ Info
+Note: Ternary operator makes if-else code much shorter and readable. If you have problems with ternary, you can always use if-else.
+
+Example 2: Ternary Operator Dart
+If the selection value is 2 then it will set output as Apple otherwise, Banana.
+
+void main() {
+  var selection = 2;
+  var output = (selection == 2) ? 'Apple' : 'Banana';
+  print(output);
+}
+ Show Output
+Example 3 Ternary Operator Dart
+This is a dart program to print whether the person is a voter or not using a ternary operator.
+
+void main() {
+  var age = 18;
+  var check = (age >= 18) ? 'You ara a voter.' : 'You are not a voter.';
+  print(check);
+}
+ Show Output
+Challenge
+Create an int variable age and initialize it with your age. Write ternary statement to print “Teenager” if age is between 13 and 19 and “Not Teenager” if age is not between 13 and 19.
+
+
+Write a dart program to check if the number is odd or even.
+Write a dart program to check whether a character is a vowel or consonant.
+Write a dart program to check whether a number is positive, negative, or zero.

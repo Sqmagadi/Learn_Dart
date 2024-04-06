@@ -1,5 +1,5 @@
 # Dart
-Dart is an open-source, client-optimized, object-oriented programming language built by google to build apps fast for many platforms like android, iOS, web, desktop, etc. Dart is a strongly typed language, which means that the compiler will detect any errors in the code before the code is compiled.
+Dart is an open-source, client-optimized, object-oriented programming language built by google for building  apps for platforms like mobile(android, iOS), web, and desktop. Dart is a strongly typed language, which means that the compiler will detect any errors in the code before the code is compiled.
 
 ## Dart Features
 - Free and open-source.
@@ -631,36 +631,37 @@ void main() {
 
 Note: Using static type helps you to prevent writing silly mistakes in code. It’s a good habit to use static type in dart.
 
-Operators In Dart
-Operators are used to perform mathematical and logical operations on the variables. Each operation in dart uses a symbol called the operator to denote the type of operation it performs. Before learning operators in the dart, you must understand the following things.
+# Operators In Dart
+Operators are used to perform mathematical and logical operations on the variables. Each operation in dart uses a symbol called the operator to denote the type of operation it performs.
 
-Operands : It represents the data.
-Operator : It represents how the operands will be processed to produce a value.
- Info
+- Operands : It represents the data.
+- Operator : It represents how the operands will be processed to produce a value.
+
 Note: Suppose the given expression is 2 + 3. Here 2 and 3 are operands, and + is the operator.
 
-Types Of Operators
+### Types Of Operators
 
-There are different types of operators in dart. They are as follows:
+1. Arithmetic Operators
+2. Increment and Decrement Operators
+3. Assignment Operators
+4. Logical Operators
+5. Type Test Operators
+6. Arithmetic Operators
+7. Arithmetic operators are the most common types of operators. They perform operations like addition, subtraction, multiplication, division, etc.
 
-Arithmetic Operators
-Increment and Decrement Operators
-Assignment Operators
-Logical Operators
-Type Test Operators
-Arithmetic Operators
-Arithmetic operators are the most common types of operators. They perform operations like addition, subtraction, multiplication, division, etc.
+| Operator Symbol | Operator Name | Description|
+| ----- | ----- | ----- |
+| +	| Addition	| For adding two operands |
+| -	| Subtraction	| For subtracting two operands |
+| -expr	| Unary Minus	| For reversing the sign of the expression |
+| *	| Multiplication | For multiplying two operands |
+| /	| Division	| For dividing two operands and give output in double |
+| ~/ | Integer Division	| For dividing two operands and give output in integer |
+| %	| Modulus | Remainder After Integer Division |
 
-Operator Symbol	Operator Name	Description
-+	Addition	For adding two operands
--	Subtraction	For subtracting two operands
--expr	Unary Minus	For reversing the sign of the expression
-*	Multiplication	For multiplying two operands
-/	Division	For dividing two operands and give output in double
-~/	Integer Division	For dividing two operands and give output in integer
-%	Modulus	Remainder After Integer Division
 Let’s look at how to perform arithmetic calculations in dart.
 
+```
 void main() {
  // declaring two numbers 
  int num1=10;
@@ -684,19 +685,26 @@ void main() {
  print("The integer division is $div2.");
  print("The modulus is $mod."); 
 }
- Show Output
-Increment and Decrement Operators
+```
+
+**Output**
+
+
+### 1. Increment and Decrement Operators
 
 With increment and decrement operators, you can increase and decrease values. If ++ is used at the beginning, then it is a prefix. If it is used at last, then it is postfix.
 
-Operator Symbol	Operator Name	Description
-++var	Pre Increment	Increase Value By 1. var = var + 1 Expression value is var+1
---var	Pre Decrement	Decrease Value By 1. var = var - 1 Expression value is var-1
-var++	Post Increment	Increase Value By 1. var = var + 1 Expression value is var
-var--	Post Decrement	Decrease Value By 1. var = var - 1 Expression value is var
- Info
-Note: ++var increases the value of operands, whereas var++ returns the actual value of operands before the increment.
+| Operator Symbol |	Operator Name |	Description |
+| --- | --- | --- |
+|++var	| Pre Increment | Increase Value By 1. var = var + 1 Expression value is var+1 |
+|--var	| Pre Decrement | Decrease Value By 1. var = var - 1 Expression value is var-1 |
+|var++	| Post Increment | Increase Value By 1. var = var + 1 Expression value is var |
+|var--	| Post Decrement | Decrease Value By 1. var = var - 1 Expression value is var |
 
+
+Note: **++var** increases the value of operands, whereas **var++** returns the actual value of operands before the increment.
+
+```
 void main() {
 // declaring two numbers 
  int num1=0;
@@ -717,17 +725,25 @@ num2 =  num1++;
 print("The value of num2 is $num2");  
   
 }
- Show Output
-Assignment Operators
+```
+
+**Output**
+
+
+## 2. Assignment Operators
 It is used to assign some values to variables. Here, we are assigning 24 to the age variable.
 
-int age = 24;
-Operator Type	Description
-=	Assign a value to a variable
-+=	Adds a value to a variable
--=	Reduces a value to a variable
-*=	Multiply value to a variable
-/=	Divided value by a variable
+`int age = 24;`
+
+| Operator Type | Description |
+| --- | --- |
+| = | Assign a value to a variable |
+| += | Adds a value to a variable |
+| -= | Reduces a value to a variable |
+| *= | Multiply value to a variable |
+| /= | Divided value by a variable |
+
+```
 void main() {
   double age = 24;
   age+= 1;  // Here age+=1 means age = age + 1.
@@ -739,17 +755,25 @@ void main() {
   age/= 2;  //Here age/=2 means age = age / 2.
   print("After Division Age is $age");
 }
- Show Output
-Relational Operators
+```
+
+**Output**
+
+
+## 3. Relational Operators
 Relational operators are also called comparison operators. They are used to make a comparison.
 
-Operator Symbol	Operator Name	Description
->	Greater than	Used to check which operand is bigger and gives result as boolean
-<	Less than	Used to check which operand is smaller and gives result as boolean
->=	Greater than or equal to	Used to check which operand is bigger or equal and gives result as boolean
-<=	Less than or equal to	Used to check which operand is smaller or equal and gives result as boolean
-==	Equal to	Used to check operands are equal to each other and gives result as boolean
-!=	Not equal to	Used to check operand are not equal to each other and gives result as boolean
+| Operator Symbol |	Operator Name |	Description |
+| --- | --- | --- |
+| > | Greater than | Used to check which operand is bigger and gives result as boolean |
+| < | Less than	| Used to check which operand is smaller and gives result as boolean |
+| >= | Greater than or equal to | Used to check which operand is bigger or equal and gives result as boolean |
+| <= | Less than or equal to | Used to check which operand is smaller or equal and gives result as boolean |
+| == | Equal to	| Used to check operands are equal to each other and gives result as boolean |
+| != | Not equal to | Used to check operand are not equal to each other and gives result as boolean |
+
+
+```
 void main() {
   
  int num1=10;
@@ -760,15 +784,23 @@ void main() {
  print(num1>num2);
  print(num1<=num2);
  print(num1>=num2);
-}
- Show Output
-Logical Operators
+};
+```
+
+**Output**
+
+
+## 4. Logical Operators
 It is used to compare values.
 
-Operator Type	Description
-&&	This is ‘and’, return true if all conditions are true
-||	This is ‘or’. Return true if one of the conditions is true
-!	This is ’not’. return false if the result is true and vice versa
+| Operator Type |	Description |
+| --- | --- |
+| && |	This is ‘and’, return true if all conditions are true |
+| || |	This is ‘or’. Return true if one of the conditions is true |
+| !	| This is ’not’. return false if the result is true and vice versa |
+
+
+```
 void main(){
   int userid = 123;
     int userpin = 456;
@@ -781,13 +813,19 @@ void main(){
     print((userid == 123) != (userpin== 456));//print false
 
 }
- Show Output
-Type Test Operators
+```
+
+**Output**
+
+## 5. Type Test Operators
 In Dart, type test operators are useful for checking types at runtime.
 
-Operator Symbol	Operator Name	Description
-is	is	Gives boolean value true if the object has a specific type
-is!	is not	Gives boolean value false if the object has a specific type
+| Operator Symbol |	Operator Name |	Description |
+| --- | --- | --- |
+| is |	is	| Gives boolean value true if the object has a specific type |
+| is! |	is not	| Gives boolean value false if the object has a specific type |
+
+```
 void main() {
   String value1 = "Dart Tutorial";
   int age = 10;
@@ -795,18 +833,21 @@ void main() {
   print(value1 is String);
   print(age is !int);
 }
- Show Output
+```
+
+**Output**
 
 
-User Input In Dart
+### User Input In Dart
 Instead of writing hard-coded values, you can give input to the computer. It will make your program more dynamic. You must import the package import 'dart:io'; for user input.
 
- Info
+
 Note: You won’t be able to take input from users using dartpad. You need to run a program from your computer.
 
-String User Input
+#### String User Input
 They are used for storing textual user input. If you want to keep values like somebody’s name, address, description, etc., you can take string input from the user.
 
+```
 import 'dart:io';
 
 void main() {
@@ -814,11 +855,16 @@ void main() {
   String? name  = stdin.readLineSync();
   print("The entered name is ${name}");
 }
- Show Output
-Integer User Input
+```
+
+**Output**
+
+
+#### Integer User Input
 
 You can take integer input to get a numeric value from the user without the decimal point. E.g. 10, 100, -800 etc.
 
+```
 import 'dart:io';
 
 void main() {
@@ -826,10 +872,15 @@ void main() {
   int? number = int.parse(stdin.readLineSync()!);
   print("The entered number is ${number}");
 }
- Show Output
-Floating Point User Input
+```
+
+**Output**
+
+
+#### Floating Point User Input
 You can use float input if you want to get a numeric value from the user with the decimal point. E.g. 10.5, 100.5, -800.9 etc.
 
+```
 import 'dart:io';
 
 void main() {
@@ -837,16 +888,19 @@ void main() {
   double number = double.parse(stdin.readLineSync()!);
   print("The entered num is $number");
 }
- Show Output
+```
+
+**Output**
 
 
-STRING IN DART
-String In Dart
+# STRING IN DART
+
 String helps you to store text based data. In String, you can represent your name, address, or complete book. It holds a series or sequence of characters – letters, numbers, and special characters. You can use single or double, or triple quotes to represent String.
 
-Example: String In Dart
+
 Single line String is written in single or double quotes, whereas multi-line strings are written in triple quotes. Here is an example of it:
 
+```
 void main() {   
    String text1 = 'This is an example of a single-line string.';   
    String text2 = "This is an example of a single line string using double quotes.";   
@@ -858,12 +912,16 @@ This is tutorial on dart strings.
    print(text2);   
    print(text3);   
 }
- Show Output
-String Concatenation
+```
+
+**Output**
+
+
+### String Concatenation
 
 You can combine one String with another string. This is called concatenation. In Dart, you can use the + operator or use interpolation to concatenate the String. Interpolation makes it easy to read and understand the code.
 
-String Concatenation In Dart
+```
 void main() {   
 String firstName = "John";
 String lastName = "Doe";
@@ -871,13 +929,19 @@ print("Using +, Full Name is "+firstName + " " + lastName+".");
 print("Using interpolation, full name is $firstName $lastName.");  
   
 }
- Show Output
-Properties Of String
-codeUnits: Returns an unmodifiable list of the UTF-16 code units of this string.
-isEmpty: Returns true if this string is empty.
-isNotEmpty: Returns false if this string is empty.
-length: Returns the length of the string including space, tab, and newline characters.
-String Properties Example In Dart
+```
+
+**Output**
+
+
+### Properties Of String
+
+1. codeUnits: Returns an unmodifiable list of the UTF-16 code units of this string.
+2. isEmpty: Returns true if this string is empty.
+3. isNotEmpty: Returns false if this string is empty.
+4. length: Returns the length of the string including space, tab, and newline characters.
+
+```
 void main() {
    String str = "Hi";
    print(str.codeUnits);   //Example of code units
@@ -885,24 +949,29 @@ void main() {
    print(str.isNotEmpty);  //Example of isNotEmpty
    print("The length of the string is: ${str.length}");   //Example of Length
 }
- Show Output
-Methods Of String
-toLowerCase(): Converts all characters in this string to lowercase.
-toUpperCase(): Converts all characters in this string to uppercase.
-trim(): Returns the string without any leading and trailing whitespace.
-compareTo(): Compares this object to another.
-replaceAll(): Replaces all substrings that match the specified pattern with a given value.
-split(): Splits the string at matches of the specified delimiter and returns a list of substrings.
-toString(): Returns a string representation of this object.
-substring(): Returns the text from any position you want.
-codeUnitAt(): Returns the 16-bit UTF-16 code unit at the given index.
-String Methods Example In Dart
+```
 
-Here you will see various string methods that can help your work a lot better and faster.
+**Output**
 
-Converting String To Uppercase and Lowercase
-You can convert your text to lower case using .toLowerCase() and convert to uppercase using .toUpperCase() method.
+### Methods Of String
 
+1. toLowerCase(): Converts all characters in this string to lowercase.
+2. toUpperCase(): Converts all characters in this string to uppercase.
+3. trim(): Returns the string without any leading and trailing whitespace.
+4. compareTo(): Compares this object to another.
+5. replaceAll(): Replaces all substrings that match the specified pattern with a given value.
+6. split(): Splits the string at matches of the specified delimiter and returns a list of substrings.
+7. toString(): Returns a string representation of this object.
+8. substring(): Returns the text from any position you want.
+9. codeUnitAt(): Returns the 16-bit UTF-16 code unit at the given index.
+
+**String Methods Example In Dart**
+
+
+1. Converting String To Uppercase and Lowercase
+You can convert your text to lower case using `.toLowerCase()` and convert to uppercase using `.toUpperCase()` method.
+
+```
 //Example of toUpperCase() and toLowerCase()
 void main() { 
    String address1 = "Florida"; // Here F is capital
@@ -912,13 +981,18 @@ void main() {
    print("Address 2 in uppercase: ${address2.toUpperCase()}"); 
    print("Address 2 in lowercase: ${address2.toLowerCase()}"); 
 }
- Show Output
-Trim String In Dart
-Trim is helpful when removing leading and trailing spaces from the text. This trim method will remove all the starting and ending spaces from the text. You can also use trimLeft() and trimRight() methods to remove space from left and right, respectively.
+```
 
- Info
-Note: The trim() method in Dart doesn’t remove spaces in the middle.
+**Output**
 
+2. Trim String In Dart
+
+Trim is helpful when removing leading and trailing spaces from the text. This trim method will remove all the starting and ending spaces from the text. You can also use `trimLeft()` and `trimRight()` methods to remove space from left and right, respectively.
+
+
+Note: The `trim()` method in Dart doesn’t remove spaces in the middle.
+
+```
 //Example of trim()
 void main() { 
   String address1 = " USA"; // Contain space at leading.
@@ -931,10 +1005,15 @@ void main() {
   print("Result of address1 trimLeft is ${address1.trimLeft()}");
   print("Result of address2 trimRight is ${address2.trimRight()}");
 }
- Show Output
-Compare String In Dart
+```
+
+**Output**
+
+3. Compare String In Dart
+
 In Dart, you can compare two strings. It will give the result 0 when two texts are equal, 1 when the first String is greater than the second, and -1 when the first String is smaller than the second.
 
+```
 //Example of compareTo()
 void main() { 
    String item1 = "Apple"; 
@@ -945,10 +1024,15 @@ void main() {
    print("Comparing item 1 with item 3: ${item1.compareTo(item3)}"); 
    print("Comparing item 3 with item 2: ${item3.compareTo(item2)}"); 
 } 
- Show Output
-Replace String In Dart
+```
+
+**Output**
+
+
+4. Replace String In Dart
 You can replace one value with another with the replaceAll(“old”, “new”) method in Dart. It will replace all the “old” words with “new”. Here in this example, this will replace milk with water.
 
+```
 //Example of replaceAll()
 void main() { 
 String text = "I am a good boy I like milk. Doctor says milk is good for health.";
@@ -959,10 +1043,15 @@ print("Original Text: $text");
 print("Replaced Text: $newText");  
    
 } 
- Show Output
-Split String In Dart
+```
+
+**Output**
+
+
+5. Split String In Dart
 You can use the dart split method if you want to split String by comma, space, or other text. It will help you to split String to list.
 
+```
 //Example of split()
 void main() { 
   String allNames = "Ram, Hari, Shyam, Gopal";
@@ -976,10 +1065,15 @@ void main() {
   print("List name at 3 index ${listNames[3]}");
    
 } 
- Show Output
-ToString In Dart
+```
+**Output**
+
+
+6. ToString In Dart
+
 In dart, toString() represents String representation of the value/object.
 
+```
 //Example of toString()
 void main() { 
 int number = 20;     
@@ -988,46 +1082,63 @@ String result = number.toString();
 print("Type of number is ${number.runtimeType}");  
 print("Type of result is ${result.runtimeType}");  
     
-}   
- Show Output
-SubString In Dart
+} 
+```  
+
+
+**Output**
+
+
+7. SubString In Dart
 You can use substring in Dart when you want to get a text from any position.
 
+```
 //Example of substring()
 void main() { 
    String text = "I love computer"; 
    print("Print only computer: ${text.substring(7)}"); // from index 6 to the last index 
    print("Print only love: ${text.substring(2,6)}");// from index 2 to the 6th index 
 } 
- Show Output
-Reverse String In Dart
+```
+
+**Output**
+
+8. Reverse String In Dart
 If you want to reverse a String in Dart, you can reverse it using a different solution. One solution is here.
 
+```
 void main() { 
   String input = "Hello"; 
   print("$input Reverse is ${input.split('').reversed.join()}"); 
 } 
- Show Output
-How To Capitalize First Letter Of String In Dart
+```
+
+**Output**
+
+9. How To Capitalize First Letter Of String In Dart
 If you want to capitalize the first letter of a String in Dart, you can use the following code.
 
+```
 //Example of capitalize first letter of String
 void main() { 
   String text = "hello world"; 
   print("Capitalized first letter of String: ${text[0].toUpperCase()}${text.substring(1)}"); 
 } 
- Show Output
+```
 
-Basic Dart Practice Questions
-Write a program to print your name in Dart.
-Write a program to print Hello I am “John Doe” and Hello I’am “John Doe” with single and double quotes.
-Declare constant type of int set value 7.
-Write a program in Dart that finds simple interest. Formula= (p * t * r) / 100
-Write a program to print a square of a number using user input.
-Write a program to print full name of a from first name and last name using user input.
-Write a program to find quotient and remainder of two integers.
-Write a program to swap two numbers.
-Write a program in Dart to remove all whitespaces from String.
-Write a Dart program to convert String to int.
-Suppose, you often go to restaurant with friends and you have to split amount of bill. Write a program to calculate split amount of bill. Formula= (total bill amount) / number of people
-Suppose, your distance to office from home is 25 km and you travel 40 km per hour. Write a program to calculate time taken to reach office in minutes. Formula= (distance) / (speed)
+**Output**
+
+**Basic Dart Practice Questions**
+
+- Write a program to print your name in Dart.
+- Write a program to print Hello I am “John Doe” and Hello I’am “John Doe” with single and double quotes.
+- Declare constant type of int set value 7.
+- Write a program in Dart that finds simple interest. Formula= (p * t * r) / 100
+- Write a program to print a square of a number using user input.
+- Write a program to print full name of a from first name and last name using user input.
+- Write a program to find quotient and remainder of two integers.
+- Write a program to swap two numbers.
+- Write a program in Dart to remove all whitespaces from String.
+- Write a Dart program to convert String to int.
+- Suppose, you often go to restaurant with friends and you have to split amount of bill. Write a program to calculate split amount of bill. Formula= (total bill amount) / number of people
+- Suppose, your distance to office from home is 25 km and you travel 40 km per hour. Write a program to calculate time taken to reach office in minutes. Formula= (distance) / (speed)
